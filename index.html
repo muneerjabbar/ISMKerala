@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISM Kerala - Islamic Students Movement</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button id="lang-en" class="lang-btn active">English</button>
+        <button id="lang-ml" class="lang-btn">മലയാളം</button>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="assets/images/logo.png" alt="ISM Kerala Logo" class="logo">
+                    <span class="logo-text" data-en="ISM Kerala" data-ml="ഐ.എസ്.എം കേരളം">ISM Kerala</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" data-en="Home" data-ml="ഹോം">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link" data-en="About" data-ml="കുറിച്ച്">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#future-programs" class="nav-link" data-en="Future Programs" data-ml="ഭാവി പരിപാടികൾ">Future Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#activities" class="nav-link" data-en="Activities" data-ml="പ്രവർത്തനങ്ങൾ">Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#state-committee" class="nav-link" data-en="State Committee" data-ml="സംസ്ഥാന കമ്മിറ്റി">State Committee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#districts" class="nav-link" data-en="Districts" data-ml="ജില്ലകൾ">Districts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link" data-en="Contact" data-ml="ബന്ധപ്പെടുക">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section id="home" class="hero">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="assets/images/carousel/slide1.jpg" alt="ISM Kerala" class="carousel-image">
+                <div class="carousel-content">
+                    <h1 data-en="Islamic Students Movement Kerala" data-ml="ഇസ്ലാമിക് സ്റ്റുഡന്റ് മൂവ്മെന്റ് കേരളം">Islamic Students Movement Kerala</h1>
+                    <p data-en="Nurturing young Muslim minds through comprehensive programs" data-ml="സമഗ്ര പരിപാടികളിലൂടെ യുവ മുസ്ലിം മനസ്സുകളെ പരിപോഷിപ്പിക്കുന്നു">Nurturing young Muslim minds through comprehensive programs</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/images/carousel/slide2.jpg" alt="Education" class="carousel-image">
+                <div class="carousel-content">
+                    <h1 data-en="Educational Excellence" data-ml="വിദ്യാഭ്യാസ മികവ്">Educational Excellence</h1>
+                    <p data-en="Blending spiritual growth with academic achievement" data-ml="ആത്മീയ വളർച്ചയെ അക്കാദമിക് നേട്ടങ്ങളുമായി ചേർത്ത്">Blending spiritual growth with academic achievement</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/images/carousel/slide3.jpg" alt="Community" class="carousel-image">
+                <div class="carousel-content">
+                    <h1 data-en="Social Responsibility" data-ml="സാമൂഹിക ഉത്തരവാദിത്തം">Social Responsibility</h1>
+                    <p data-en="Building a better community through service" data-ml="സേവനത്തിലൂടെ മികച്ച സമൂഹം നിർമ്മിക്കുന്നു">Building a better community through service</p>
+                </div>
+            </div>
+            <div class="carousel-nav">
+                <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-en="About ISM Kerala" data-ml="ഐ.എസ്.എം കേരളത്തെ കുറിച്ച്">About ISM Kerala</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-en="ISM Kerala is the youth wing of Kerala Nadvathul Mujahideen, dedicated to nurturing young Muslim minds through comprehensive programs that blend spiritual growth, educational excellence, and social responsibility. Our organization operates across 16 districts of Kerala, providing guidance and support to students and youth in their academic and spiritual journey." data-ml="ഐ.എസ്.എം കേരളം കേരള നദ്വത്തുല് മുജാഹിദീന്റെ യുവ വിംഗാണ്, ആത്മീയ വളർച്ച, വിദ്യാഭ്യാസ മികവ്, സാമൂഹിക ഉത്തരവാദിത്തം എന്നിവ ചേർത്തുകൊണ്ട് സമഗ്ര പരിപാടികളിലൂടെ യുവ മുസ്ലിം മനസ്സുകളെ പരിപോഷിപ്പിക്കാൻ സമർപ്പിച്ചിരിക്കുന്നു. ഞങ്ങളുടെ സംഘടന കേരളത്തിലെ 16 ജില്ലകളിൽ പ്രവർത്തിക്കുന്നു, വിദ്യാർത്ഥികൾക്കും യുവാക്കൾക്കും അവരുടെ അക്കാദമിക്, ആത്മീയ യാത്രയിൽ മാർഗദർശനവും പിന്തുണയും നൽകുന്നു.">ISM Kerala is the youth wing of Kerala Nadvathul Mujahideen, dedicated to nurturing young Muslim minds through comprehensive programs that blend spiritual growth, educational excellence, and social responsibility. Our organization operates across 16 districts of Kerala, providing guidance and support to students and youth in their academic and spiritual journey.</p>
+                    <a href="about/index.html" class="read-more-btn" data-en="Read More" data-ml="കൂടുതൽ വായിക്കുക">Read More</a>
+                </div>
+                <div class="about-image">
+                    <img src="assets/images/about.jpg" alt="About ISM Kerala">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Near Future Programs Section -->
+    <section id="future-programs" class="future-programs">
+        <div class="container">
+            <h2 class="section-title" data-en="Near Future Programs" data-ml="ഭാവി പരിപാടികൾ">Near Future Programs</h2>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <img src="assets/images/future-program1.jpg" alt="Future Program">
+                    <div class="program-content">
+                        <h3 data-en="Youth Leadership Summit 2024" data-ml="യുവ നേതൃത്വ ശിഖര സമ്മേളനം 2024">Youth Leadership Summit 2024</h3>
+                        <p data-en="A comprehensive program to develop leadership skills among young Muslims" data-ml="യുവ മുസ്ലിംകളിൽ നേതൃത്വ കഴിവുകൾ വികസിപ്പിക്കുന്നതിനുള്ള സമഗ്ര പരിപാടി">A comprehensive program to develop leadership skills among young Muslims</p>
+                        <div class="program-date" data-en="Date: March 15-17, 2024" data-ml="തീയതി: മാർച്ച് 15-17, 2024">Date: March 15-17, 2024</div>
+                        <a href="futurepgm/index.html" class="read-more-btn" data-en="Read More" data-ml="കൂടുതൽ വായിക്കുക">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="activities">
+        <div class="container">
+            <h2 class="section-title" data-en="Our Activities" data-ml="ഞങ്ങളുടെ പ്രവർത്തനങ്ങൾ">Our Activities</h2>
+            <div class="activities-grid">
+                <div class="activity-card" onclick="window.location.href='qhls/index.html'">
+                    <div class="activity-icon">
+                        <i class="fas fa-book-quran"></i>
+                    </div>
+                    <h3 data-en="Quran Hadith Learning School (QHLS)" data-ml="ഖുർആൻ ഹദീസ് ലേണിംഗ് സ്കൂൾ (QHLS)">Quran Hadith Learning School (QHLS)</h3>
+                    <p data-en="Comprehensive Islamic education program" data-ml="സമഗ്ര ഇസ്ലാമിക് വിദ്യാഭ്യാസ പരിപാടി">Comprehensive Islamic education program</p>
+                </div>
+                <div class="activity-card" onclick="window.location.href='velicham/index.html'">
+                    <div class="activity-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 data-en="Velicham" data-ml="വെളിച്ചം">Velicham</h3>
+                    <p data-en="Educational enlightenment programs" data-ml="വിദ്യാഭ്യാസ പ്രബോധന പരിപാടികൾ">Educational enlightenment programs</p>
+                </div>
+                <div class="activity-card" onclick="window.location.href='dawah/index.html'">
+                    <div class="activity-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                    <h3 data-en="Dawah" data-ml="ദാവഃ">Dawah</h3>
+                    <p data-en="Islamic outreach and community service" data-ml="ഇസ്ലാമിക് ഔട്ട് റീച്ച്, സാമൂഹിക സേവനം">Islamic outreach and community service</p>
+                </div>
+                <div class="activity-card" onclick="window.location.href='eelaf/index.html'">
+                    <div class="activity-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 data-en="Eelaf" data-ml="ഇലാഫ്">Eelaf</h3>
+                    <p data-en="Unity and brotherhood initiatives" data-ml="ഐക്യവും സഹോദരത്വവും">Unity and brotherhood initiatives</p>
+                </div>
+                <div class="activity-card" onclick="window.location.href='vichinthanam/index.html'">
+                    <div class="activity-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 data-en="Vichinthanam" data-ml="വിചിന്തനം">Vichinthanam</h3>
+                    <p data-en="Intellectual discourse and critical thinking" data-ml="ബുദ്ധിപരമായ സംഭാഷണവും വിമർശനാത്മക ചിന്തയും">Intellectual discourse and critical thinking</p>
+                </div>
+                <div class="activity-card" onclick="window.location.href='inspire/index.html'">
+                    <div class="activity-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 data-en="Inspire" data-ml="ഇൻസ്പയർ">Inspire</h3>
+                    <p data-en="Motivational and career guidance programs" data-ml="പ്രചോദനാത്മക, കരിയർ മാർഗദർശന പരിപാടികൾ">Motivational and career guidance programs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- State Committee Section -->
+    <section id="state-committee" class="state-committee">
+        <div class="container">
+            <h2 class="section-title" data-en="State Committee" data-ml="സംസ്ഥാന കമ്മിറ്റി">State Committee</h2>
+            <div class="committee-grid">
+                <div class="committee-member president">
+                    <img src="assets/images/committee/president.jpg" alt="President">
+                    <h3 data-en="President" data-ml="പ്രസിഡന്റ്">President</h3>
+                    <p>Dr. Abdul Rahman</p>
+                </div>
+                <div class="committee-member vice-president">
+                    <img src="assets/images/committee/vice-president1.jpg" alt="Vice President">
+                    <h3 data-en="Vice President" data-ml="വൈസ് പ്രസിഡന്റ്">Vice President</h3>
+                    <p>Muhammad Ali</p>
+                </div>
+                <div class="committee-member vice-president">
+                    <img src="assets/images/committee/vice-president2.jpg" alt="Vice President">
+                    <h3 data-en="Vice President" data-ml="വൈസ് പ്രസിഡന്റ്">Vice President</h3>
+                    <p>Ahmed Hassan</p>
+                </div>
+                <div class="committee-member secretary">
+                    <img src="assets/images/committee/secretary.jpg" alt="Secretary">
+                    <h3 data-en="Secretary" data-ml="സെക്രട്ടറി">Secretary</h3>
+                    <p>Ibrahim Khan</p>
+                </div>
+                <div class="committee-member joint-secretary">
+                    <img src="assets/images/committee/joint-secretary1.jpg" alt="Joint Secretary">
+                    <h3 data-en="Joint Secretary" data-ml="ജോയിന്റ് സെക്രട്ടറി">Joint Secretary</h3>
+                    <p>Yusuf Ahmed</p>
+                </div>
+                <div class="committee-member joint-secretary">
+                    <img src="assets/images/committee/joint-secretary2.jpg" alt="Joint Secretary">
+                    <h3 data-en="Joint Secretary" data-ml="ജോയിന്റ് സെക്രട്ടറി">Joint Secretary</h3>
+                    <p>Faisal Rahman</p>
+                </div>
+                <div class="committee-member treasurer">
+                    <img src="assets/images/committee/treasurer.jpg" alt="Treasurer">
+                    <h3 data-en="Treasurer" data-ml="ട്രഷറർ">Treasurer</h3>
+                    <p>Omar Abdullah</p>
+                </div>
+                <div class="committee-member org-secretary">
+                    <img src="assets/images/committee/org-secretary.jpg" alt="Organization Secretary">
+                    <h3 data-en="Organization Secretary" data-ml="ഓർഗനൈസേഷൻ സെക്രട്ടറി">Organization Secretary</h3>
+                    <p>Khalid Mohammed</p>
+                </div>
+                <div class="committee-member secretariate">
+                    <img src="assets/images/committee/secretariate1.jpg" alt="Secretariate Member">
+                    <h3 data-en="Secretariate Member" data-ml="സെക്രട്ടറിയറ്റ് അംഗം">Secretariate Member</h3>
+                    <p>Hassan Ali</p>
+                </div>
+                <div class="committee-member secretariate">
+                    <img src="assets/images/committee/secretariate2.jpg" alt="Secretariate Member">
+                    <h3 data-en="Secretariate Member" data-ml="സെക്രട്ടറിയറ്റ് അംഗം">Secretariate Member</h3>
+                    <p>Zainab Ahmed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Districts Section -->
+    <section id="districts" class="districts">
+        <div class="container">
+            <h2 class="section-title" data-en="Our Districts" data-ml="ഞങ്ങളുടെ ജില്ലകൾ">Our Districts</h2>
+            <div class="districts-content">
+                <div class="kerala-map">
+                    <svg viewBox="0 0 400 600" class="kerala-svg">
+                        <!-- Kerala districts as clickable areas -->
+                        <path d="M200,50 L250,80 L280,120 L270,160 L290,200 L280,240 L300,280 L290,320 L310,360 L300,400 L320,440 L300,480 L280,520 L260,560 L240,580 L220,560 L200,520 L180,480 L160,440 L140,400 L120,360 L100,320 L80,280 L100,240 L80,200 L100,160 L80,120 L110,80 Z" 
+                              class="district" data-district="thiruvananthapuram" fill="#FF6B6B" onclick="navigateToDistrict('thiruvananthapuram')">
+                            <title>Thiruvananthapuram</title>
+                        </path>
+                        <path d="M180,100 L220,120 L240,160 L220,200 L240,240 L220,280 L240,320 L220,360 L240,400 L220,440 L200,480 L180,440 L160,400 L140,360 L120,320 L140,280 L120,240 L140,200 L120,160 L140,120 Z" 
+                              class="district" data-district="kollam" fill="#4ECDC4" onclick="navigateToDistrict('kollam')">
+                            <title>Kollam</title>
+                        </path>
+                        <path d="M160,140 L200,160 L220,200 L200,240 L220,280 L200,320 L220,360 L200,400 L180,440 L160,400 L140,360 L120,320 L140,280 L120,240 L140,200 L120,160 Z" 
+                              class="district" data-district="pathanamthitta" fill="#45B7D1" onclick="navigateToDistrict('pathanamthitta')">
+                            <title>Pathanamthitta</title>
+                        </path>
+                        <path d="M140,180 L180,200 L200,240 L180,280 L200,320 L180,360 L200,400 L180,440 L160,400 L140,360 L120,320 L140,280 L120,240 L140,200 L120,180 Z" 
+                              class="district" data-district="alappuzha" fill="#96CEB4" onclick="navigateToDistrict('alappuzha')">
+                            <title>Alappuzha</title>
+                        </path>
+                        <path d="M120,220 L160,240 L180,280 L160,320 L180,360 L160,400 L140,360 L120,320 L140,280 L120,240 Z" 
+                              class="district" data-district="kottayam" fill="#FFEAA7" onclick="navigateToDistrict('kottayam')">
+                            <title>Kottayam</title>
+                        </path>
+                        <path d="M100,260 L140,280 L160,320 L140,360 L160,400 L140,440 L120,400 L100,360 L120,320 L100,280 Z" 
+                              class="district" data-district="idukki" fill="#DDA0DD" onclick="navigateToDistrict('idukki')">
+                            <title>Idukki</title>
+                        </path>
+                        <path d="M80,300 L120,320 L140,360 L120,400 L140,440 L120,480 L100,440 L80,400 L100,360 L80,320 Z" 
+                              class="district" data-district="ernakulam" fill="#98D8C8" onclick="navigateToDistrict('ernakulam')">
+                            <title>Ernakulam</title>
+                        </path>
+                        <path d="M60,340 L100,360 L120,400 L100,440 L120,480 L100,520 L80,480 L60,440 L80,400 L60,360 Z" 
+                              class="district" data-district="thrissur" fill="#F7DC6F" onclick="navigateToDistrict('thrissur')">
+                            <title>Thrissur</title>
+                        </path>
+                        <path d="M40,380 L80,400 L100,440 L80,480 L100,520 L80,560 L60,520 L40,480 L60,440 L40,400 Z" 
+                              class="district" data-district="palakkad" fill="#BB8FCE" onclick="navigateToDistrict('palakkad')">
+                            <title>Palakkad</title>
+                        </path>
+                        <path d="M20,420 L60,440 L80,480 L60,520 L80,560 L60,580 L40,560 L20,520 L40,480 L20,440 Z" 
+                              class="district" data-district="malappuram-east" fill="#85C1E9" onclick="navigateToDistrict('malappuram-east')">
+                            <title>Malappuram East</title>
+                        </path>
+                        <path d="M0,460 L40,480 L60,520 L40,560 L60,580 L40,600 L20,580 L0,540 L20,500 L0,460 Z" 
+                              class="district" data-district="malappuram-west" fill="#F8C471" onclick="navigateToDistrict('malappuram-west')">
+                            <title>Malappuram West</title>
+                        </path>
+                        <path d="M320,100 L360,120 L380,160 L360,200 L380,240 L360,280 L380,320 L360,360 L380,400 L360,440 L340,480 L320,440 L300,400 L280,360 L300,320 L280,280 L300,240 L280,200 L300,160 L280,120 Z" 
+                              class="district" data-district="calicut-south" fill="#82E0AA" onclick="navigateToDistrict('calicut-south')">
+                            <title>Calicut South</title>
+                        </path>
+                        <path d="M300,140 L340,160 L360,200 L340,240 L360,280 L340,320 L360,360 L340,400 L320,440 L300,400 L280,360 L300,320 L280,280 L300,240 L280,200 L300,160 Z" 
+                              class="district" data-district="calicut-north" fill="#F1948A" onclick="navigateToDistrict('calicut-north')">
+                            <title>Calicut North</title>
+                        </path>
+                        <path d="M280,180 L320,200 L340,240 L320,280 L340,320 L320,360 L340,400 L320,440 L300,400 L280,360 L300,320 L280,280 L300,240 L280,200 Z" 
+                              class="district" data-district="wayanad" fill="#85C1E9" onclick="navigateToDistrict('wayanad')">
+                            <title>Wayanad</title>
+                        </path>
+                        <path d="M260,220 L300,240 L320,280 L300,320 L320,360 L300,400 L280,360 L260,320 L280,280 L260,240 Z" 
+                              class="district" data-district="kannur" fill="#F7DC6F" onclick="navigateToDistrict('kannur')">
+                            <title>Kannur</title>
+                        </path>
+                        <path d="M240,260 L280,280 L300,320 L280,360 L300,400 L280,440 L260,400 L240,360 L260,320 L240,280 Z" 
+                              class="district" data-district="kasargod" fill="#D7BDE2" onclick="navigateToDistrict('kasargod')">
+                            <title>Kasargod</title>
+                        </path>
+                    </svg>
+                </div>
+                <div class="district-legend">
+                    <h3 data-en="Click on any district to visit their page" data-ml="ഏതെങ്കിലും ജില്ലയിൽ ക്ലിക്ക് ചെയ്ത് അവരുടെ പേജ് സന്ദർശിക്കുക">Click on any district to visit their page</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-en="Contact Us" data-ml="ഞങ്ങളുമായി ബന്ധപ്പെടുക">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3 data-en="Address" data-ml="വിലാസം">Address</h3>
+                            <p>ISM Kerala, Mujahid Centre<br>CD Tower, Calicut-4<br>Kerala, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3 data-en="Phone" data-ml="ഫോൺ">Phone</h3>
+                            <p>+91 495 1234567<br>+91 495 7654321</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3 data-en="Email" data-ml="ഇമെയിൽ">Email</h3>
+                            <p>info@ismkerala.org<br>contact@ismkerala.org</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.123456789!2d75.7789!3d11.2588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDE1JzMxLjYiTiA3NcKwNDYnNDQuMCJF!5e0!3m2!1sen!2sin!4v1234567890" 
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-en="ISM Kerala" data-ml="ഐ.എസ്.എം കേരളം">ISM Kerala</h3>
+                    <p data-en="Nurturing young Muslim minds through comprehensive programs" data-ml="സമഗ്ര പരിപാടികളിലൂടെ യുവ മുസ്ലിം മനസ്സുകളെ പരിപോഷിപ്പിക്കുന്നു">Nurturing young Muslim minds through comprehensive programs</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-en="Quick Links" data-ml="ദ്രുത ലിങ്കുകൾ">Quick Links</h3>
+                    <ul>
+                        <li><a href="#about" data-en="About" data-ml="കുറിച്ച്">About</a></li>
+                        <li><a href="#activities" data-en="Activities" data-ml="പ്രവർത്തനങ്ങൾ">Activities</a></li>
+                        <li><a href="#districts" data-en="Districts" data-ml="ജില്ലകൾ">Districts</a></li>
+                        <li><a href="#contact" data-en="Contact" data-ml="ബന്ധപ്പെടുക">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-en="Follow Us" data-ml="ഞങ്ങളെ പിന്തുടരുക">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ISM Kerala. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
