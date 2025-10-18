@@ -134,7 +134,7 @@ function navigateToDistrict(districtName) {
 // Future programs expiry check
 document.addEventListener('DOMContentLoaded', function() {
     const futureProgramsSection = document.getElementById('future-programs');
-    const programDate = '2024-03-17'; // Set your expiry date here
+    const programDate = '2025-11-17'; // Set your expiry date here
     
     function checkProgramExpiry() {
         const today = new Date();
@@ -279,3 +279,18 @@ loadingStyle.textContent = `
     }
 `;
 document.head.appendChild(loadingStyle);
+
+  function navigateToDistrict(district) {
+    window.location.href = `/${district}/index.html`;
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const paths = document.querySelectorAll("#districts-group path");
+    paths.forEach((path) => {
+      const district = path.dataset.district;
+      path.style.cursor = "pointer";
+      path.addEventListener("click", () => navigateToDistrict(district));
+      path.addEventListener("mouseover", () => (path.style.opacity = 0.75));
+      path.addEventListener("mouseout", () => (path.style.opacity = 1));
+    });
+  });
