@@ -1,227 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Programs - ISM Kerala</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Under Construction</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: #d1d1d1;
+    }
+
+    .gear {
+        width: 60px;
+        height: 60px;
+        margin: 20px;
+        border: 6px solid #fff;
+        border-radius: 50%;
+        border-top: 6px solid #ff6b6b;
+        animation: spin 2s linear infinite;
+    }
+
+    .gears {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 20px;
+        font-size: 0.9rem;
+        color: #aaa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .back-btn {
+        margin-top: 10px;
+        padding: 8px 20px;
+        font-size: 1rem;
+        color: #fff;
+        background: #ff6b6b;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .back-btn:hover {
+        background: #ff4b4b;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        h1 { font-size: 2rem; }
+        p { font-size: 1rem; }
+        .gear { width: 50px; height: 50px; border-width: 5px; }
+    }
+</style>
 </head>
 <body>
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-        <button id="lang-en" class="lang-btn active">English</button>
-        <button id="lang-ml" class="lang-btn">മലയാളം</button>
+
+    <h1>Under Construction</h1>
+    <p>We are working hard to bring you a better experience. Stay tuned!</p>
+
+    <div class="gears">
+        <div class="gear"></div>
+        <div class="gear" style="animation-duration:3s;"></div>
+        <div class="gear" style="animation-duration:1.5s;"></div>
     </div>
 
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <img src="../assets/images/logo.png" alt="ISM Kerala Logo" class="logo">
-                    <span class="logo-text" data-en="ISM Kerala" data-ml="ഐ.എസ്.എം കേരളം">ISM Kerala</span>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="../index.html#home" class="nav-link" data-en="Home" data-ml="ഹോം">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../index.html#about" class="nav-link" data-en="About" data-ml="കുറിച്ച്">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../index.html#future-programs" class="nav-link" data-en="Future Programs" data-ml="ഭാവി പരിപാടികൾ">Future Programs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../index.html#activities" class="nav-link" data-en="Activities" data-ml="പ്രവർത്തനങ്ങൾ">Activities</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../index.html#state-committee" class="nav-link" data-en="State Committee" data-ml="സംസ്ഥാന കമ്മിറ്റി">State Committee</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../index.html#districts" class="nav-link" data-en="Districts" data-ml="ജില്ലകൾ">Districts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../index.html#contact" class="nav-link" data-en="Contact" data-ml="ബന്ധപ്പെടുക">Contact</a>
-                    </li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div class="footer">
+        &copy; 2025 Codex
+        <button class="back-btn" onclick="goBack()">Go Back</button>
+    </div>
 
-    <!-- Future Programs Hero Section -->
-    <section class="programs-hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 data-en="Near Future Programs" data-ml="ഭാവി പരിപാടികൾ">Near Future Programs</h1>
-                <p data-en="Upcoming events and programs for the Muslim youth community" data-ml="മുസ്ലിം യുവ സമൂഹത്തിനായുള്ള വരാനിരിക്കുന്ന ഇവന്റുകളും പരിപാടികളും">Upcoming events and programs for the Muslim youth community</p>
-            </div>
-        </div>
-    </section>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 
-    <!-- Programs Content -->
-    <section class="programs-content">
-        <div class="container">
-            <div class="programs-grid">
-                <div class="program-card featured">
-                    <div class="program-image">
-                        <img src="../assets/images/future-program1.jpg" alt="Youth Leadership Summit 2024">
-                        <div class="program-badge" data-en="Featured" data-ml="വിശേഷം">Featured</div>
-                    </div>
-                    <div class="program-details">
-                        <div class="program-meta">
-                            <span class="program-date">
-                                <i class="fas fa-calendar"></i>
-                                <span data-en="March 15-17, 2024" data-ml="മാർച്ച് 15-17, 2024">March 15-17, 2024</span>
-                            </span>
-                            <span class="program-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span data-en="Calicut, Kerala" data-ml="കോഴിക്കോട്, കേരളം">Calicut, Kerala</span>
-                            </span>
-                        </div>
-                        <h2 data-en="Youth Leadership Summit 2024" data-ml="യുവ നേതൃത്വ ശിഖര സമ്മേളനം 2024">Youth Leadership Summit 2024</h2>
-                        <p data-en="A comprehensive three-day program designed to develop leadership skills among young Muslims. The summit will feature workshops, seminars, and interactive sessions led by renowned Islamic scholars and community leaders. Participants will learn about effective leadership principles, community service, and how to make a positive impact in society." data-ml="യുവ മുസ്ലിംകളിൽ നേതൃത്വ കഴിവുകൾ വികസിപ്പിക്കാൻ രൂപകൽപ്പന ചെയ്തിരിക്കുന്ന ഒരു സമഗ്ര മൂന്ന് ദിവസത്തെ പരിപാടി. പ്രശസ്ത ഇസ്ലാമിക് പണ്ഡിതന്മാരും സമൂഹ നേതാക്കളും നയിക്കുന്ന വർക്ക്ഷോപ്പുകൾ, സെമിനാറുകൾ, ഇന്ററാക്റ്റീവ് സെഷനുകൾ ഈ ശിഖര സമ്മേളനത്തിൽ ഉൾപ്പെടുത്തിയിരിക്കുന്നു. പങ്കാളികൾ ഫലപ്രദമായ നേതൃത്വ തത്വങ്ങൾ, സാമൂഹിക സേവനം, സമൂഹത്തിൽ പോസിറ്റീവ് സ്വാധീനം ചെലുത്തുന്നതിനെക്കുറിച്ച് പഠിക്കും.">A comprehensive three-day program designed to develop leadership skills among young Muslims. The summit will feature workshops, seminars, and interactive sessions led by renowned Islamic scholars and community leaders. Participants will learn about effective leadership principles, community service, and how to make a positive impact in society.</p>
-                        
-                        <div class="program-features">
-                            <h3 data-en="Program Features" data-ml="പരിപാടി സവിശേഷതകൾ">Program Features</h3>
-                            <ul>
-                                <li data-en="Interactive workshops on leadership development" data-ml="നേതൃത്വ വികസനത്തിൽ ഇന്ററാക്റ്റീവ് വർക്ക്ഷോപ്പുകൾ">Interactive workshops on leadership development</li>
-                                <li data-en="Sessions on Islamic values and modern challenges" data-ml="ഇസ്ലാമിക് മൂല്യങ്ങളും ആധുനിക വെല്ലുവിളികളും">Sessions on Islamic values and modern challenges</li>
-                                <li data-en="Networking opportunities with like-minded youth" data-ml="സമാന മനോഭാവമുള്ള യുവാക്കളുമായി നെറ്റ്‌വർക്കിംഗ് അവസരങ്ങൾ">Networking opportunities with like-minded youth</li>
-                                <li data-en="Community service projects" data-ml="സാമൂഹിക സേവന പ്രോജക്റ്റുകൾ">Community service projects</li>
-                                <li data-en="Cultural programs and entertainment" data-ml="സാംസ്കാരിക പരിപാടികളും വിനോദവും">Cultural programs and entertainment</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="program-registration">
-                            <div class="registration-info">
-                                <span class="registration-fee" data-en="Registration Fee: ₹500" data-ml="രജിസ്ട്രേഷൻ ഫീസ്: ₹500">Registration Fee: ₹500</span>
-                                <span class="registration-deadline" data-en="Deadline: March 10, 2024" data-ml="അവസാന തീയതി: മാർച്ച് 10, 2024">Deadline: March 10, 2024</span>
-                            </div>
-                            <button class="register-btn" data-en="Register Now" data-ml="ഇപ്പോൾ രജിസ്റ്റർ ചെയ്യുക">Register Now</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="program-card">
-                    <div class="program-image">
-                        <img src="../assets/images/future-program2.jpg" alt="Islamic Knowledge Workshop">
-                    </div>
-                    <div class="program-details">
-                        <div class="program-meta">
-                            <span class="program-date">
-                                <i class="fas fa-calendar"></i>
-                                <span data-en="April 5-7, 2024" data-ml="ഏപ്രിൽ 5-7, 2024">April 5-7, 2024</span>
-                            </span>
-                            <span class="program-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span data-en="Thiruvananthapuram" data-ml="തിരുവനന്തപുരം">Thiruvananthapuram</span>
-                            </span>
-                        </div>
-                        <h3 data-en="Islamic Knowledge Workshop" data-ml="ഇസ്ലാമിക് നോളജ് വർക്ക്ഷോപ്പ്">Islamic Knowledge Workshop</h3>
-                        <p data-en="A specialized workshop focusing on deepening Islamic knowledge and understanding among students and young professionals." data-ml="വിദ്യാർത്ഥികളുടെയും യുവ പ്രൊഫഷണലുകളുടെയും ഇടയിൽ ഇസ്ലാമിക് അറിവും ധാരണയും ആഴത്തിലാക്കുന്നതിൽ ശ്രദ്ധ കേന്ദ്രീകരിക്കുന്ന ഒരു പ്രത്യേക വർക്ക്ഷോപ്പ്">A specialized workshop focusing on deepening Islamic knowledge and understanding among students and young professionals.</p>
-                        <a href="#" class="read-more-btn" data-en="Learn More" data-ml="കൂടുതൽ അറിയുക">Learn More</a>
-                    </div>
-                </div>
-
-                <div class="program-card">
-                    <div class="program-image">
-                        <img src="../assets/images/future-program3.jpg" alt="Community Service Initiative">
-                    </div>
-                    <div class="program-details">
-                        <div class="program-meta">
-                            <span class="program-date">
-                                <i class="fas fa-calendar"></i>
-                                <span data-en="May 1-31, 2024" data-ml="മേയ് 1-31, 2024">May 1-31, 2024</span>
-                            </span>
-                            <span class="program-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span data-en="All Districts" data-ml="എല്ലാ ജില്ലകളും">All Districts</span>
-                            </span>
-                        </div>
-                        <h3 data-en="Community Service Initiative" data-ml="സാമൂഹിക സേവന പ്രവർത്തനം">Community Service Initiative</h3>
-                        <p data-en="A month-long community service program where youth will engage in various social welfare activities across all districts." data-ml="എല്ലാ ജില്ലകളിലും വിവിധ സാമൂഹിക ക്ഷേമ പ്രവർത്തനങ്ങളിൽ യുവാക്കൾ ഏർപ്പെടുന്ന ഒരു മാസത്തെ സാമൂഹിക സേവന പരിപാടി">A month-long community service program where youth will engage in various social welfare activities across all districts.</p>
-                        <a href="#" class="read-more-btn" data-en="Learn More" data-ml="കൂടുതൽ അറിയുക">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Registration Section -->
-    <section class="registration-section">
-        <div class="container">
-            <div class="registration-content">
-                <h2 data-en="Register for Programs" data-ml="പരിപാടികൾക്കായി രജിസ്റ്റർ ചെയ്യുക">Register for Programs</h2>
-                <p data-en="Join our upcoming programs and be part of the ISM Kerala community" data-ml="ഞങ്ങളുടെ വരാനിരിക്കുന്ന പരിപാടികളിൽ പങ്കെടുക്കുകയും ഐ.എസ്.എം കേരള സമൂഹത്തിന്റെ ഭാഗമാകുകയും ചെയ്യുക">Join our upcoming programs and be part of the ISM Kerala community</p>
-                <div class="registration-form">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" placeholder="Full Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Email Address" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" placeholder="Phone Number" required>
-                        </div>
-                        <div class="form-group">
-                            <select required>
-                                <option value="">Select Program</option>
-                                <option value="summit">Youth Leadership Summit 2024</option>
-                                <option value="workshop">Islamic Knowledge Workshop</option>
-                                <option value="service">Community Service Initiative</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Additional Information" rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn" data-en="Submit Registration" data-ml="രജിസ്ട്രേഷൻ സമർപ്പിക്കുക">Submit Registration</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 data-en="ISM Kerala" data-ml="ഐ.എസ്.എം കേരളം">ISM Kerala</h3>
-                    <p data-en="Nurturing young Muslim minds through comprehensive programs" data-ml="സമഗ്ര പരിപാടികളിലൂടെ യുവ മുസ്ലിം മനസ്സുകളെ പരിപോഷിപ്പിക്കുന്നു">Nurturing young Muslim minds through comprehensive programs</p>
-                </div>
-                <div class="footer-section">
-                    <h3 data-en="Quick Links" data-ml="ദ്രുത ലിങ്കുകൾ">Quick Links</h3>
-                    <ul>
-                        <li><a href="../index.html#about" data-en="About" data-ml="കുറിച്ച്">About</a></li>
-                        <li><a href="../index.html#activities" data-en="Activities" data-ml="പ്രവർത്തനങ്ങൾ">Activities</a></li>
-                        <li><a href="../index.html#districts" data-en="Districts" data-ml="ജില്ലകൾ">Districts</a></li>
-                        <li><a href="../index.html#contact" data-en="Contact" data-ml="ബന്ധപ്പെടുക">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3 data-en="Follow Us" data-ml="ഞങ്ങളെ പിന്തുടരുക">Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 ISM Kerala. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../assets/js/script.js"></script>
 </body>
 </html>

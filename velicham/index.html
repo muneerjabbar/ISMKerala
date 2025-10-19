@@ -1,162 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velicham - Educational Enlightenment | ISM Kerala</title>
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Under Construction</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: #d1d1d1;
+    }
+
+    .gear {
+        width: 60px;
+        height: 60px;
+        margin: 20px;
+        border: 6px solid #fff;
+        border-radius: 50%;
+        border-top: 6px solid #ff6b6b;
+        animation: spin 2s linear infinite;
+    }
+
+    .gears {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 20px;
+        font-size: 0.9rem;
+        color: #aaa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .back-btn {
+        margin-top: 10px;
+        padding: 8px 20px;
+        font-size: 1rem;
+        color: #fff;
+        background: #ff6b6b;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .back-btn:hover {
+        background: #ff4b4b;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        h1 { font-size: 2rem; }
+        p { font-size: 1rem; }
+        .gear { width: 50px; height: 50px; border-width: 5px; }
+    }
+</style>
 </head>
 <body>
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-        <button id="lang-en" class="lang-btn active">English</button>
-        <button id="lang-ml" class="lang-btn">മലയാളം</button>
+
+    <h1>Under Construction</h1>
+    <p>We are working hard to bring you a better experience. Stay tuned!</p>
+
+    <div class="gears">
+        <div class="gear"></div>
+        <div class="gear" style="animation-duration:3s;"></div>
+        <div class="gear" style="animation-duration:1.5s;"></div>
     </div>
 
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <img src="../../assets/images/logo.png" alt="ISM Kerala Logo" class="logo">
-                    <span class="logo-text" data-en="ISM Kerala" data-ml="ഐ.എസ്.എം കേരളം">ISM Kerala</span>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="../../index.html#home" class="nav-link" data-en="Home" data-ml="ഹോം">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../../index.html#about" class="nav-link" data-en="About" data-ml="കുറിച്ച്">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../../index.html#future-programs" class="nav-link" data-en="Future Programs" data-ml="ഭാവി പരിപാടികൾ">Future Programs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../../index.html#activities" class="nav-link" data-en="Activities" data-ml="പ്രവർത്തനങ്ങൾ">Activities</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../../index.html#state-committee" class="nav-link" data-en="State Committee" data-ml="സംസ്ഥാന കമ്മിറ്റി">State Committee</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../../index.html#districts" class="nav-link" data-en="Districts" data-ml="ജില്ലകൾ">Districts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../../index.html#contact" class="nav-link" data-en="Contact" data-ml="ബന്ധപ്പെടുക">Contact</a>
-                    </li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div class="footer">
+        &copy; 2025 Codex
+        <button class="back-btn" onclick="goBack()">Go Back</button>
+    </div>
 
-    <!-- Velicham Hero Section -->
-    <section class="activity-hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="activity-icon-large">
-                    <img src="../../assets/images/activities/velichamlogo.png" alt="Velicham Logo">
-                </div>
-                <h1 data-en="Velicham" data-ml="വെളിച്ചം">Velicham</h1>
-                <p data-en="Educational enlightenment programs for intellectual growth" data-ml="ബുദ്ധിപരമായ വളർച്ചയ്ക്കുള്ള വിദ്യാഭ്യാസ പ്രബോധന പരിപാടികൾ">Educational enlightenment programs for intellectual growth</p>
-            </div>
-        </div>
-    </section>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 
-    <!-- Velicham Content -->
-    <section class="activity-content">
-        <div class="container">
-            <div class="content-grid">
-                <div class="content-text">
-                    <h2 data-en="About Velicham" data-ml="വെളിച്ചത്തെ കുറിച്ച്">About Velicham</h2>
-                    <p data-en="Velicham (Light) is our educational enlightenment program designed to illuminate young minds with knowledge, critical thinking, and intellectual curiosity. Through various educational initiatives, we aim to foster a love for learning and develop well-rounded individuals who can contribute meaningfully to society." data-ml="വെളിച്ചം (ലൈറ്റ്) അറിവ്, വിമർശനാത്മക ചിന്ത, ബുദ്ധിപരമായ ജിജ്ഞാസ എന്നിവയിലൂടെ യുവ മനസ്സുകളെ പ്രകാശിപ്പിക്കാൻ രൂപകൽപ്പന ചെയ്തിരിക്കുന്ന ഞങ്ങളുടെ വിദ്യാഭ്യാസ പ്രബോധന പരിപാടിയാണ്. വിവിധ വിദ്യാഭ്യാസ പ്രവർത്തനങ്ങളിലൂടെ, പഠനത്തിനുള്ള സ്നേഹം പ്രോത്സാഹിപ്പിക്കുകയും സമൂഹത്തിന് അർത്ഥവത്തായ രീതിയിൽ സംഭാവന നൽകാൻ കഴിയുന്ന സമഗ്ര വ്യക്തിത്വങ്ങൾ വികസിപ്പിക്കുകയും ഞങ്ങൾ ലക്ഷ്യമിടുന്നു.">Velicham (Light) is our educational enlightenment program designed to illuminate young minds with knowledge, critical thinking, and intellectual curiosity. Through various educational initiatives, we aim to foster a love for learning and develop well-rounded individuals who can contribute meaningfully to society.</p>
-                </div>
-                
-                <div class="content-image">
-                    <img src="../../assets/images/velicham-main.jpg" alt="Velicham Program">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Program Features -->
-    <section class="program-features">
-        <div class="container">
-            <h2 class="section-title" data-en="Program Features" data-ml="പരിപാടി സവിശേഷതകൾ">Program Features</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <h3 data-en="Study Circles" data-ml="പഠന വൃത്തങ്ങൾ">Study Circles</h3>
-                    <p data-en="Regular study sessions on various topics" data-ml="വിവിധ വിഷയങ്ങളിൽ നിയമിത പഠന സെഷനുകൾ">Regular study sessions on various topics</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-microphone"></i>
-                    </div>
-                    <h3 data-en="Seminars & Workshops" data-ml="സെമിനാറുകളും വർക്ക്ഷോപ്പുകളും">Seminars & Workshops</h3>
-                    <p data-en="Educational seminars and skill development workshops" data-ml="വിദ്യാഭ്യാസ സെമിനാറുകളും കഴിവ് വികസന വർക്ക്ഷോപ്പുകളും">Educational seminars and skill development workshops</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 data-en="Peer Learning" data-ml="സമപ്രായിക പഠനം">Peer Learning</h3>
-                    <p data-en="Collaborative learning among students" data-ml="വിദ്യാർത്ഥികൾ തമ്മിലുള്ള സഹകരണ പഠനം">Collaborative learning among students</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h3 data-en="Competitions" data-ml="മത്സരങ്ങൾ">Competitions</h3>
-                    <p data-en="Educational competitions and quizzes" data-ml="വിദ്യാഭ്യാസ മത്സരങ്ങളും ക്വിസുകളും">Educational competitions and quizzes</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 data-en="ISM Kerala" data-ml="ഐ.എസ്.എം കേരളം">ISM Kerala</h3>
-                    <p data-en="Nurturing young Muslim minds through comprehensive programs" data-ml="സമഗ്ര പരിപാടികളിലൂടെ യുവ മുസ്ലിം മനസ്സുകളെ പരിപോഷിപ്പിക്കുന്നു">Nurturing young Muslim minds through comprehensive programs</p>
-                </div>
-                <div class="footer-section">
-                    <h3 data-en="Quick Links" data-ml="ദ്രുത ലിങ്കുകൾ">Quick Links</h3>
-                    <ul>
-                        <li><a href="../../index.html#about" data-en="About" data-ml="കുറിച്ച്">About</a></li>
-                        <li><a href="../../index.html#activities" data-en="Activities" data-ml="പ്രവർത്തനങ്ങൾ">Activities</a></li>
-                        <li><a href="../../index.html#districts" data-en="Districts" data-ml="ജില്ലകൾ">Districts</a></li>
-                        <li><a href="../../index.html#contact" data-en="Contact" data-ml="ബന്ധപ്പെടുക">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3 data-en="Follow Us" data-ml="ഞങ്ങളെ പിന്തുടരുക">Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 ISM Kerala. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../../assets/js/script.js"></script>
 </body>
 </html>

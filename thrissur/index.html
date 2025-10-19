@@ -1,203 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISM Thrissur District | ISM Kerala</title>
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Under Construction</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: #d1d1d1;
+    }
+
+    .gear {
+        width: 60px;
+        height: 60px;
+        margin: 20px;
+        border: 6px solid #fff;
+        border-radius: 50%;
+        border-top: 6px solid #ff6b6b;
+        animation: spin 2s linear infinite;
+    }
+
+    .gears {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 20px;
+        font-size: 0.9rem;
+        color: #aaa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .back-btn {
+        margin-top: 10px;
+        padding: 8px 20px;
+        font-size: 1rem;
+        color: #fff;
+        background: #ff6b6b;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .back-btn:hover {
+        background: #ff4b4b;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        h1 { font-size: 2rem; }
+        p { font-size: 1rem; }
+        .gear { width: 50px; height: 50px; border-width: 5px; }
+    }
+</style>
 </head>
 <body>
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-        <button id="lang-en" class="lang-btn active">English</button>
-        <button id="lang-ml" class="lang-btn">മലയാളം</button>
+
+    <h1>Under Construction</h1>
+    <p>We are working hard to bring you a better experience. Stay tuned!</p>
+
+    <div class="gears">
+        <div class="gear"></div>
+        <div class="gear" style="animation-duration:3s;"></div>
+        <div class="gear" style="animation-duration:1.5s;"></div>
     </div>
 
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <img src="../../assets/images/logo.png" alt="ISM Kerala Logo" class="logo">
-                    <span class="logo-text" data-en="ISM Kerala" data-ml="ഐ.എസ്.എം കേരളം">ISM Kerala</span>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="../../index.html#home" class="nav-link" data-en="Home" data-ml="ഹോം">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../../index.html#about" class="nav-link" data-en="About" data-ml="കുറിച്ച്">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../../index.html#future-programs" class="nav-link" data-en="Future Programs" data-ml="ഭാവി പരിപാടികൾ">Future Programs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../../index.html#activities" class="nav-link" data-en="Activities" data-ml="പ്രവർത്തനങ്ങൾ">Activities</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../../index.html#state-committee" class="nav-link" data-en="State Committee" data-ml="സംസ്ഥാന കമ്മിറ്റി">State Committee</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../../index.html#districts" class="nav-link" data-en="Districts" data-ml="ജില്ലകൾ">Districts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../../index.html#contact" class="nav-link" data-en="Contact" data-ml="ബന്ധപ്പെടുക">Contact</a>
-                    </li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div class="footer">
+        &copy; 2025 Codex
+        <button class="back-btn" onclick="goBack()">Go Back</button>
+    </div>
 
-    <!-- District Hero Section -->
-    <section class="district-hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 data-en="ISM Thrissur District" data-ml="ഐ.എസ്.എം തൃശൂർ ജില്ല">ISM Thrissur District</h1>
-                <p data-en="Serving the Muslim youth community in Thrissur district" data-ml="തൃശൂർ ജില്ലയിലെ മുസ്ലിം യുവ സമൂഹത്തെ സേവിക്കുന്നു">Serving the Muslim youth community in Thrissur district</p>
-            </div>
-        </div>
-    </section>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 
-    <!-- District Content -->
-    <section class="district-content">
-        <div class="container">
-            <div class="content-grid">
-                <div class="content-text">
-                    <h2 data-en="About ISM Thrissur" data-ml="ഐ.എസ്.എം തൃശൂറിനെ കുറിച്ച്">About ISM Thrissur</h2>
-                    <p data-en="ISM Thrissur is one of the most active districts of ISM Kerala, serving the Muslim youth community across the cultural capital of Kerala. Our district committee works tirelessly to organize various programs and activities that promote Islamic education, community service, and youth development." data-ml="ഐ.എസ്.എം തൃശൂർ കേരളത്തിന്റെ സാംസ്കാരിക തലസ്ഥാനത്തിലുടനീളം മുസ്ലിം യുവ സമൂഹത്തെ സേവിക്കുന്ന ഐ.എസ്.എം കേരളത്തിന്റെ ഏറ്റവും സജീവമായ ജില്ലകളിൽ ഒന്നാണ്. ഇസ്ലാമിക് വിദ്യാഭ്യാസം, സാമൂഹിക സേവനം, യുവ വികസനം എന്നിവ പ്രോത്സാഹിപ്പിക്കുന്ന വിവിധ പരിപാടികളും പ്രവർത്തനങ്ങളും ക്രമീകരിക്കാൻ ഞങ്ങളുടെ ജില്ലാ കമ്മിറ്റി അക്ഷയമായി പ്രവർത്തിക്കുന്നു.">ISM Thrissur is one of the most active districts of ISM Kerala, serving the Muslim youth community across the cultural capital of Kerala. Our district committee works tirelessly to organize various programs and activities that promote Islamic education, community service, and youth development.</p>
-                </div>
-                
-                <div class="content-image">
-                    <img src="../../assets/images/thrissur-main.jpg" alt="ISM Thrissur">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- District Committee -->
-    <section class="district-committee">
-        <div class="container">
-            <h2 class="section-title" data-en="District Committee" data-ml="ജില്ലാ കമ്മിറ്റി">District Committee</h2>
-            <div class="committee-grid">
-                <div class="committee-member">
-                    <img src="../../assets/images/committee/district-president.jpg" alt="District President">
-                    <h3 data-en="District President" data-ml="ജില്ലാ പ്രസിഡന്റ്">District President</h3>
-                    <p>Muhammad Shafi</p>
-                </div>
-                <div class="committee-member">
-                    <img src="../../assets/images/committee/district-secretary.jpg" alt="District Secretary">
-                    <h3 data-en="District Secretary" data-ml="ജില്ലാ സെക്രട്ടറി">District Secretary</h3>
-                    <p>Ahmed Ali</p>
-                </div>
-                <div class="committee-member">
-                    <img src="../../assets/images/committee/district-treasurer.jpg" alt="District Treasurer">
-                    <h3 data-en="District Treasurer" data-ml="ജില്ലാ ട്രഷറർ">District Treasurer</h3>
-                    <p>Ibrahim Khan</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- District Activities -->
-    <section class="district-activities">
-        <div class="container">
-            <h2 class="section-title" data-en="District Activities" data-ml="ജില്ലാ പ്രവർത്തനങ്ങൾ">District Activities</h2>
-            <div class="activities-grid">
-                <div class="activity-item">
-                    <div class="activity-icon">
-                        <i class="fas fa-book-quran"></i>
-                    </div>
-                    <h3 data-en="QHLS Classes" data-ml="QHLS ക്ലാസുകൾ">QHLS Classes</h3>
-                    <p data-en="Regular Quran and Hadith learning sessions" data-ml="നിയമിത ഖുർആൻ, ഹദീസ് പഠന സെഷനുകൾ">Regular Quran and Hadith learning sessions</p>
-                </div>
-                <div class="activity-item">
-                    <div class="activity-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 data-en="Study Circles" data-ml="പഠന വൃത്തങ്ങൾ">Study Circles</h3>
-                    <p data-en="Weekly study groups for youth" data-ml="യുവാക്കൾക്കുള്ള പ്രതിവാര പഠന ഗ്രൂപ്പുകൾ">Weekly study groups for youth</p>
-                </div>
-                <div class="activity-item">
-                    <div class="activity-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3 data-en="Community Service" data-ml="സാമൂഹിക സേവനം">Community Service</h3>
-                    <p data-en="Various community welfare activities" data-ml="വിവിധ സാമൂഹിക ക്ഷേമ പ്രവർത്തനങ്ങൾ">Various community welfare activities</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Information -->
-    <section class="district-contact">
-        <div class="container">
-            <h2 class="section-title" data-en="Contact Information" data-ml="ബന്ധപ്പെടുക">Contact Information</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h3 data-en="Address" data-ml="വിലാസം">Address</h3>
-                        <p>ISM Thrissur District Office<br>Near Thrissur Railway Station<br>Thrissur, Kerala</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h3 data-en="Phone" data-ml="ഫോൺ">Phone</h3>
-                        <p>+91 487 1234567<br>+91 487 7654321</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h3 data-en="Email" data-ml="ഇമെയിൽ">Email</h3>
-                        <p>thrissur@ismkerala.org<br>info.thrissur@ismkerala.org</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 data-en="ISM Kerala" data-ml="ഐ.എസ്.എം കേരളം">ISM Kerala</h3>
-                    <p data-en="Nurturing young Muslim minds through comprehensive programs" data-ml="സമഗ്ര പരിപാടികളിലൂടെ യുവ മുസ്ലിം മനസ്സുകളെ പരിപോഷിപ്പിക്കുന്നു">Nurturing young Muslim minds through comprehensive programs</p>
-                </div>
-                <div class="footer-section">
-                    <h3 data-en="Quick Links" data-ml="ദ്രുത ലിങ്കുകൾ">Quick Links</h3>
-                    <ul>
-                        <li><a href="../../index.html#about" data-en="About" data-ml="കുറിച്ച്">About</a></li>
-                        <li><a href="../../index.html#activities" data-en="Activities" data-ml="പ്രവർത്തനങ്ങൾ">Activities</a></li>
-                        <li><a href="../../index.html#districts" data-en="Districts" data-ml="ജില്ലകൾ">Districts</a></li>
-                        <li><a href="../../index.html#contact" data-en="Contact" data-ml="ബന്ധപ്പെടുക">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3 data-en="Follow Us" data-ml="ഞങ്ങളെ പിന്തുടരുക">Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 ISM Kerala. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../../assets/js/script.js"></script>
 </body>
 </html>
