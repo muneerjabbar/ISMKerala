@@ -1,177 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About ISM Kerala - Islamic Students Movement</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Under Construction</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        color: #d1d1d1;
+    }
+
+    .gear {
+        width: 60px;
+        height: 60px;
+        margin: 20px;
+        border: 6px solid #fff;
+        border-radius: 50%;
+        border-top: 6px solid #ff6b6b;
+        animation: spin 2s linear infinite;
+    }
+
+    .gears {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 20px;
+        font-size: 0.9rem;
+        color: #aaa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .back-btn {
+        margin-top: 10px;
+        padding: 8px 20px;
+        font-size: 1rem;
+        color: #fff;
+        background: #ff6b6b;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .back-btn:hover {
+        background: #ff4b4b;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+        h1 { font-size: 2rem; }
+        p { font-size: 1rem; }
+        .gear { width: 50px; height: 50px; border-width: 5px; }
+    }
+</style>
 </head>
 <body>
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-        <button id="lang-en" class="lang-btn active">English</button>
-        <button id="lang-ml" class="lang-btn">മലയാളം</button>
+
+    <h1>Under Construction</h1>
+    <p>We are working hard to bring you a better experience. Stay tuned!</p>
+
+    <div class="gears">
+        <div class="gear"></div>
+        <div class="gear" style="animation-duration:3s;"></div>
+        <div class="gear" style="animation-duration:1.5s;"></div>
     </div>
 
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <img src="../assets/images/logo.png" alt="ISM Kerala Logo" class="logo">
-                    <span class="logo-text" data-en="ISM Kerala" data-ml="ഐ.എസ്.എം കേരളം">ISM Kerala</span>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="../index.html#home" class="nav-link" data-en="Home" data-ml="ഹോം">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../index.html#about" class="nav-link" data-en="About" data-ml="കുറിച്ച്">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../index.html#future-programs" class="nav-link" data-en="Future Programs" data-ml="ഭാവി പരിപാടികൾ">Future Programs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../index.html#activities" class="nav-link" data-en="Activities" data-ml="പ്രവർത്തനങ്ങൾ">Activities</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../index.html#state-committee" class="nav-link" data-en="State Committee" data-ml="സംസ്ഥാന കമ്മിറ്റി">State Committee</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../index.html#districts" class="nav-link" data-en="Districts" data-ml="ജില്ലകൾ">Districts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../index.html#contact" class="nav-link" data-en="Contact" data-ml="ബന്ധപ്പെടുക">Contact</a>
-                    </li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <div class="footer">
+        &copy; 2025 Codex
+        <button class="back-btn" onclick="goBack()">Go Back</button>
+    </div>
 
-    <!-- About Hero Section -->
-    <section class="about-hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 data-en="About ISM Kerala" data-ml="ഐ.എസ്.എം കേരളത്തെ കുറിച്ച്">About ISM Kerala</h1>
-                <p data-en="Nurturing young Muslim minds through comprehensive programs" data-ml="സമഗ്ര പരിപാടികളിലൂടെ യുവ മുസ്ലിം മനസ്സുകളെ പരിപോഷിപ്പിക്കുന്നു">Nurturing young Muslim minds through comprehensive programs</p>
-            </div>
-        </div>
-    </section>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 
-    <!-- About Content -->
-    <section class="about-detail">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2 data-en="Our Mission" data-ml="ഞങ്ങളുടെ ദൗത്യം">Our Mission</h2>
-                    <p data-en="ISM Kerala is the youth wing of Kerala Nadvathul Mujahideen, dedicated to nurturing young Muslim minds through comprehensive programs that blend spiritual growth, educational excellence, and social responsibility. We believe in empowering the youth to become responsible citizens who contribute positively to society while maintaining their Islamic values and principles." data-ml="ഐ.എസ്.എം കേരളം കേരള നദ്വത്തുല് മുജാഹിദീന്റെ യുവ വിംഗാണ്, ആത്മീയ വളർച്ച, വിദ്യാഭ്യാസ മികവ്, സാമൂഹിക ഉത്തരവാദിത്തം എന്നിവ ചേർത്തുകൊണ്ട് സമഗ്ര പരിപാടികളിലൂടെ യുവ മുസ്ലിം മനസ്സുകളെ പരിപോഷിപ്പിക്കാൻ സമർപ്പിച്ചിരിക്കുന്നു. യുവാക്കളെ ശക്തിപ്പെടുത്തി അവരുടെ ഇസ്ലാമിക് മൂല്യങ്ങളും തത്വങ്ങളും നിലനിർത്തിക്കൊണ്ട് സമൂഹത്തിന് പോസിറ്റീവായി സംഭാവന നൽകുന്ന ഉത്തരവാദിത്തമുള്ള പൗരന്മാരാകാൻ ഞങ്ങൾ വിശ്വസിക്കുന്നു.">ISM Kerala is the youth wing of Kerala Nadvathul Mujahideen, dedicated to nurturing young Muslim minds through comprehensive programs that blend spiritual growth, educational excellence, and social responsibility. We believe in empowering the youth to become responsible citizens who contribute positively to society while maintaining their Islamic values and principles.</p>
-                    
-                    <h2 data-en="Our Vision" data-ml="ഞങ്ങളുടെ ദർശനം">Our Vision</h2>
-                    <p data-en="To create a generation of educated, spiritually aware, and socially responsible Muslim youth who will lead the community towards progress while upholding Islamic values and contributing to the betterment of society at large." data-ml="വിദ്യാഭ്യാസം നേടിയ, ആത്മീയമായി അവബോധമുള്ള, സാമൂഹിക ഉത്തരവാദിത്തമുള്ള മുസ്ലിം യുവാക്കളുടെ തലമുറ സൃഷ്ടിക്കുക, അവർ ഇസ്ലാമിക് മൂല്യങ്ങൾ ഉയർത്തിപ്പിടിച്ചുകൊണ്ട് സമൂഹത്തെ പുരോഗതിയിലേക്ക് നയിക്കുകയും വിശാലമായ സമൂഹത്തിന്റെ മെച്ചപ്പെടുത്തലിന് സംഭാവന നൽകുകയും ചെയ്യും.">To create a generation of educated, spiritually aware, and socially responsible Muslim youth who will lead the community towards progress while upholding Islamic values and contributing to the betterment of society at large.</p>
-                    
-                    <h2 data-en="Our History" data-ml="ഞങ്ങളുടെ ചരിത്രം">Our History</h2>
-                    <p data-en="Founded in the early 1990s, ISM Kerala has been at the forefront of Islamic student movements in Kerala. Over the years, we have grown from a small group of dedicated students to a statewide organization with presence in all 16 districts of Kerala. Our journey has been marked by continuous growth, innovative programs, and unwavering commitment to the cause of Islamic education and community development." data-ml="1990 കളുടെ തുടക്കത്തിൽ സ്ഥാപിതമായ ഐ.എസ്.എം കേരളം കേരളത്തിലെ ഇസ്ലാമിക് വിദ്യാർത്ഥി പ്രസ്ഥാനങ്ങളുടെ മുൻനിരയിൽ നിന്നിരിക്കുന്നു. വർഷങ്ങളായി, ഞങ്ങൾ ഒരു ചെറിയ സമർപ്പിത വിദ്യാർത്ഥികളുടെ ഗ്രൂപ്പിൽ നിന്ന് കേരളത്തിലെ 16 ജില്ലകളിലെല്ലാം സാന്നിധ്യമുള്ള ഒരു സംസ്ഥാന സംഘടനയായി വളർന്നിരിക്കുന്നു. ഇസ്ലാമിക് വിദ്യാഭ്യാസത്തിന്റെയും സമൂഹ വികസനത്തിന്റെയും കാര്യത്തിൽ നിരന്തരമായ വളർച്ച, നവീന പരിപാടികൾ, അക്ഷയമായ പ്രതിബദ്ധത എന്നിവയാണ് ഞങ്ങളുടെ യാത്രയെ അടയാളപ്പെടുത്തിയിരിക്കുന്നത്.">Founded in the early 1990s, ISM Kerala has been at the forefront of Islamic student movements in Kerala. Over the years, we have grown from a small group of dedicated students to a statewide organization with presence in all 16 districts of Kerala. Our journey has been marked by continuous growth, innovative programs, and unwavering commitment to the cause of Islamic education and community development.</p>
-                </div>
-                
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="stat-number">16</div>
-                        <div class="stat-label" data-en="Districts" data-ml="ജില്ലകൾ">Districts</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label" data-en="Active Members" data-ml="സജീവ അംഗങ്ങൾ">Active Members</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">30+</div>
-                        <div class="stat-label" data-en="Years of Service" data-ml="സേവന വർഷങ്ങൾ">Years of Service</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">1000+</div>
-                        <div class="stat-label" data-en="Programs Conducted" data-ml="നടത്തിയ പരിപാടികൾ">Programs Conducted</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Values Section -->
-    <section class="values">
-        <div class="container">
-            <h2 class="section-title" data-en="Our Core Values" data-ml="ഞങ്ങളുടെ കോർ മൂല്യങ്ങൾ">Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-book-quran"></i>
-                    </div>
-                    <h3 data-en="Islamic Education" data-ml="ഇസ്ലാമിക് വിദ്യാഭ്യാസം">Islamic Education</h3>
-                    <p data-en="Promoting comprehensive Islamic knowledge and understanding" data-ml="സമഗ്ര ഇസ്ലാമിക് അറിവും ധാരണയും പ്രോത്സാഹിപ്പിക്കുന്നു">Promoting comprehensive Islamic knowledge and understanding</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 data-en="Academic Excellence" data-ml="അക്കാദമിക് മികവ്">Academic Excellence</h3>
-                    <p data-en="Encouraging pursuit of knowledge and academic achievement" data-ml="അറിവിന്റെയും അക്കാദമിക് നേട്ടത്തിന്റെയും പിന്തുടരൽ പ്രോത്സാഹിപ്പിക്കുന്നു">Encouraging pursuit of knowledge and academic achievement</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3 data-en="Community Service" data-ml="സാമൂഹിക സേവനം">Community Service</h3>
-                    <p data-en="Serving the community with dedication and compassion" data-ml="സമർപ്പണവും കരുണയും കൊണ്ട് സമൂഹത്തെ സേവിക്കുന്നു">Serving the community with dedication and compassion</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3 data-en="Unity" data-ml="ഐക്യം">Unity</h3>
-                    <p data-en="Fostering unity and brotherhood among Muslim youth" data-ml="മുസ്ലിം യുവാക്കളിൽ ഐക്യവും സഹോദരത്വവും പ്രോത്സാഹിപ്പിക്കുന്നു">Fostering unity and brotherhood among Muslim youth</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 data-en="ISM Kerala" data-ml="ഐ.എസ്.എം കേരളം">ISM Kerala</h3>
-                    <p data-en="Nurturing young Muslim minds through comprehensive programs" data-ml="സമഗ്ര പരിപാടികളിലൂടെ യുവ മുസ്ലിം മനസ്സുകളെ പരിപോഷിപ്പിക്കുന്നു">Nurturing young Muslim minds through comprehensive programs</p>
-                </div>
-                <div class="footer-section">
-                    <h3 data-en="Quick Links" data-ml="ദ്രുത ലിങ്കുകൾ">Quick Links</h3>
-                    <ul>
-                        <li><a href="../index.html#about" data-en="About" data-ml="കുറിച്ച്">About</a></li>
-                        <li><a href="../index.html#activities" data-en="Activities" data-ml="പ്രവർത്തനങ്ങൾ">Activities</a></li>
-                        <li><a href="../index.html#districts" data-en="Districts" data-ml="ജില്ലകൾ">Districts</a></li>
-                        <li><a href="../index.html#contact" data-en="Contact" data-ml="ബന്ധപ്പെടുക">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3 data-en="Follow Us" data-ml="ഞങ്ങളെ പിന്തുടരുക">Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 ISM Kerala. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../assets/js/script.js"></script>
 </body>
 </html>
