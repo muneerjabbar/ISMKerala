@@ -294,3 +294,49 @@ document.head.appendChild(loadingStyle);
       path.addEventListener("mouseout", () => (path.style.opacity = 1));
     });
   });
+
+// Initialize Kerala map with districts
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if Leaflet is loaded
+    if (typeof L === 'undefined') {
+        console.error('Leaflet library not loaded');
+        return;
+    }
+
+    // Initialize the map centered on Kerala
+    var map = L.map('kerala-map').setView([10.8505, 76.2711], 7); // lat/lng of Kerala center
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // District centers with correct URLs matching your folder structure
+    var districts = [
+        { name: 'Thiruvananthapuram', lat: 8.5241, lng: 76.9366, url: 'thiruvananthapuram/index.html' },
+        { name: 'Kollam', lat: 8.8932, lng: 76.6141, url: 'kollam/index.html' },
+        { name: 'Pathanamthitta', lat: 9.2642, lng: 76.7878, url: 'pathanamthitta/index.html' },
+        { name: 'Alappuzha', lat: 9.4981, lng: 76.3388, url: 'alappuzha/index.html' },
+        { name: 'Kottayam', lat: 9.5916, lng: 76.5224, url: 'kottayam/index.html' },
+        { name: 'Idukki', lat: 9.9186, lng: 77.1025, url: 'idukki/index.html' },
+        { name: 'Ernakulam', lat: 9.9816, lng: 76.2999, url: 'ernakulam/index.html' },
+        { name: 'Thrissur', lat: 10.5276, lng: 76.2144, url: 'thrissur/index.html' },
+        { name: 'Palakkad', lat: 10.7867, lng: 76.6548, url: 'palakkad/index.html' },
+        { name: 'MalappuramEast', lat: 11.1202984, lng: 76.1199677, url: 'malappuramEast/index.html' },
+        { name: 'MalappuramWest', lat: 10.9146, lng: 75.9221, url: 'malappuramWest/index.html' },
+        { name: 'CalicutNorth', lat: 11.5949, lng: 75.5960, url: 'calicutNorth/index.html' },
+        { name: 'CalicutSouth', lat: 11.2588, lng: 75.7804, url: 'calicutSouth/index.html' },
+        { name: 'Wayanad', lat: 11.6850, lng: 76.1310, url: 'wayanad/index.html' },
+        { name: 'Kannur', lat: 11.8745, lng: 75.3704, url: 'kannur/index.html' },
+        { name: 'Kasargod', lat: 12.4982, lng: 74.9860, url: 'kasargod/index.html' }
+    ];
+
+    // Add markers for each district
+    districts.forEach(function(district) {
+        var marker = L.marker([district.lat, district.lng]).addTo(map);
+        marker.bindTooltip(district.name, {permanent: false, direction: 'top'});
+        marker.on('click', function() {
+            window.location.href = district.url;
+        });
+    });
+});  

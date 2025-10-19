@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
     <!-- Language Switcher -->
@@ -258,12 +259,12 @@
                 <div class="committee-member joint-secretary">
                     <img src="assets/images/committee/joint-secretary1.jpg" alt="Joint Secretary">
                     <h3 data-en="Joint Secretary" data-ml="ജോയിന്റ് സെക്രട്ടറി">Joint Secretary</h3>
-                    <p>Yasar Arafat</p>
+                    <p>Siraj Chelembra</p>
                 </div>
                 <div class="committee-member joint-secretary">
                     <img src="assets/images/committee/joint-secretary2.jpg" alt="Joint Secretary">
                     <h3 data-en="Joint Secretary" data-ml="ജോയിന്റ് സെക്രട്ടറി">Joint Secretary</h3>
-                    <p>Siraj Chelembra</p>
+                    <p>Ysar Arafat</p>
                 </div>
                 <div class="committee-member treasurer">
                     <img src="assets/images/committee/treasurer.jpg" alt="Treasurer">
@@ -285,12 +286,45 @@
                     <h3 data-en="Secretariate Member" data-ml="സെക്രട്ടറിയറ്റ് അംഗം">Secretariate Member</h3>
                     <p>Shihab Thodupuzha</p>
                 </div>
+                <div class="committee-member secretariate">
+                    <img src="assets/images/committee/secretariate3.jpg" alt="Secretariate Member">
+                    <h3 data-en="Secretariate Member" data-ml="സെക്രട്ടറിയറ്റ് അംഗം">Secretariate Member</h3>
+                    <p>Rahmuthullah Swalahi</p>
+                </div>    
+                <div class="committee-member secretariate">
+                    <img src="assets/images/committee/secretariate4.jpg" alt="Secretariate Member">
+                    <h3 data-en="Secretariate Member" data-ml="സെക്രട്ടറിയറ്റ് അംഗം">Secretariate Member</h3>
+                    <p>Adil Atheef Salafi</p>
+                </div>     
+                <div class="committee-member secretariate">
+                    <img src="assets/images/committee/secretariate5.jpg" alt="Secretariate Member">
+                    <h3 data-en="Secretariate Member" data-ml="സെക്രട്ടറിയറ്റ് അംഗം">Secretariate Member</h3>
+                    <p>Jaleel Mamankara</p>
+                </div>   
+                <div class="committee-member secretariate">
+                    <img src="assets/images/committee/secretariate6.jpg" alt="Secretariate Member">
+                    <h3 data-en="Secretariate Member" data-ml="സെക്രട്ടറിയറ്റ് അംഗം">Secretariate Member</h3>
+                    <p>Nasar Mundakkayam</p>
+                </div>                                                      
             </div>
         </div>
     </section>
 
     <!-- Districts Section -->
-    <!-- <section id="districts" class="districts">
+<section id="districts" class="districts">
+  <div class="container">
+    <h2 class="section-title" data-en="Our Districts" data-ml="ഞങ്ങളുടെ ജില്ലകൾ">Our Districts</h2>
+    <div id="kerala-map" style="height: 600px; width: 100%;"></div>
+    <div class="district-legend">
+      <h3 data-en="Click on any district to visit their page" data-ml="ഏതെങ്കിലും ജില്ലയിൽ ക്ലിക്ക് ചെയ്ത് അവരുടെ പേജ് സന്ദർശിക്കുക">
+        Click on any district to visit their page
+      </h3>
+    </div>
+  </div>
+</section>
+
+    <!-- Districts Section -->
+<!-- <section id="olddistricts" class="districts">
         <div class="container">
             <h2 class="section-title" data-en="Our Districts" data-ml="ഞങ്ങളുടെ ജില്ലകൾ">Our Districts</h2>
             <div class="districts-content">
@@ -368,60 +402,9 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>  -->
 
-    <!-- Districts Section -->
-<section id="districts" class="districts">
-  <div class="container">
-    <h2 class="section-title" data-en="Our Districts" data-ml="ഞങ്ങളുടെ ജില്ലകൾ">
-      Our Districts
-    </h2>
 
-    <div class="districts-content">
-      <div class="kerala-map">
-        <!-- Kerala Districts Accurate SVG -->
-        <svg
-          id="kerala-svg"
-          viewBox="0 0 550 1000"
-          xmlns="http://www.w3.org/2000/svg"
-          class="kerala-svg"
-        >
-          <title>Kerala ISM Districts</title>
-
-          <!-- District Paths -->
-          <!-- Each path corresponds to a district, based on real Kerala boundaries -->
-          <g id="districts-group">
-            <path data-district="kasargod" d="M110 40 L160 90 L150 160 L100 210 L80 170 Z" fill="#d7bde2"></path>
-            <path data-district="kannur" d="M160 90 L210 140 L200 210 L150 260 L100 210 L150 160 Z" fill="#f7dc6f"></path>
-            <path data-district="wayanad" d="M210 140 L260 190 L250 260 L200 310 L150 260 L200 210 Z" fill="#85c1e9"></path>
-            <path data-district="calicut-north" d="M260 190 L310 240 L300 310 L250 360 L200 310 L250 260 Z" fill="#f1948a"></path>
-            <path data-district="calicut-south" d="M250 360 L300 410 L290 480 L240 530 L190 480 L240 430 Z" fill="#82e0aa"></path>
-            <path data-district="malappuram-west" d="M240 530 L290 580 L280 650 L230 700 L180 650 L230 600 Z" fill="#f8c471"></path>
-            <path data-district="malappuram-east" d="M290 580 L340 630 L330 700 L280 750 L230 700 L280 650 Z" fill="#85c1e9"></path>
-            <path data-district="palakkad" d="M280 750 L330 800 L320 870 L270 920 L220 870 L270 820 Z" fill="#bb8fce"></path>
-            <path data-district="thrissur" d="M230 600 L180 650 L130 600 L180 550 L230 600 Z" fill="#f7dc6f"></path>
-            <path data-district="ernakulam" d="M130 600 L80 650 L30 600 L80 550 L130 600 Z" fill="#98d8c8"></path>
-            <path data-district="idukki" d="M80 650 L30 700 L20 770 L70 820 L120 770 L70 720 Z" fill="#dda0dd"></path>
-            <path data-district="kottayam" d="M80 550 L30 500 L80 450 L130 500 Z" fill="#ffeaa7"></path>
-            <path data-district="alappuzha" d="M130 500 L180 450 L230 500 L180 550 Z" fill="#96ceb4"></path>
-            <path data-district="pathanamthitta" d="M80 450 L30 400 L80 350 L130 400 Z" fill="#45b7d1"></path>
-            <path data-district="kollam" d="M130 400 L180 350 L230 400 L180 450 Z" fill="#4ecdc4"></path>
-            <path data-district="thiruvananthapuram" d="M80 350 L30 300 L80 250 L130 300 Z" fill="#ff6b6b"></path>
-          </g>
-        </svg>
-      </div>
-
-      <div class="district-legend">
-        <h3
-          data-en="Click on any district to visit their page"
-          data-ml="ഏതെങ്കിലും ജില്ലയിൽ ക്ലിക്ക് ചെയ്ത് അവരുടെ പേജ് സന്ദർശിക്കുക"
-        >
-          Click on any district to visit their page
-        </h3>
-      </div>
-    </div>
-  </div>
-</section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -440,19 +423,19 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <h3 data-en="Phone" data-ml="ഫോൺ">Phone</h3>
-                            <p>+91 495 1234567<br>+91 495 7654321</p>
+                            <p>+91 495 2722801<br>+91 9656561967</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h3 data-en="Email" data-ml="ഇമെയിൽ">Email</h3>
-                            <p>info@ismkerala.org<br>contact@ismkerala.org</p>
+                            <p>ismkerala1970@gmail.com</p>
                         </div>
                     </div>
                 </div>
                 <div class="contact-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.123456789!2d75.7789!3d11.2588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDE1JzMxLjYiTiA3NcKwNDYnNDQuMCJF!5e0!3m2!1sen!2sin!4v1234567890" 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.123456789!2d75.7918223!3d11.261175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDE1JzQwLjIiTiA3NcKwNDcnMzAuNiJF!5e0!3m2!1sen!2sin!4v1234567890" 
                             width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
@@ -488,10 +471,12 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024 ISM Kerala. All rights reserved.</p>
+                <p>@Powered By gatepass.codex@gmail.com</p>
             </div>
         </div>
     </footer>
 
     <script src="assets/js/script.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>    
 </body>
 </html>

@@ -493,6 +493,7 @@ section {
 /* Districts Section */
 .districts {
     background: #f8f9fa;
+    padding: 4rem 0;
 }
 
 .districts-content {
@@ -506,7 +507,29 @@ section {
     background: white;
     padding: 2rem;
     border-radius: 15px;
+}
+
+/* Map container styles */
+#kerala-map {
+    border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e9ecef;
+}
+
+.district-legend {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.district-legend h3 {
+    color: #2c5aa0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
 }
 
 .kerala-svg {
