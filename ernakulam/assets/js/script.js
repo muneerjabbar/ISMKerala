@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Initialize the map centered on Kerala
-    var map = L.map('kerala-map').setView([10.021185,76.3645109], 9); // lat/lng of Kerala center
+    var map = L.map('kerala-map').setView([10.021185,76.3645109], 8); // lat/lng of Kerala center
 
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
