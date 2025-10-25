@@ -1,114 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Website Under Construction</title>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        overflow: hidden;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 3rem;
-        margin-bottom: 10px;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-    }
-
-    p {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
-        color: #d1d1d1;
-    }
-
-    .gear {
-        width: 60px;
-        height: 60px;
-        margin: 20px;
-        border: 6px solid #fff;
-        border-radius: 50%;
-        border-top: 6px solid #ff6b6b;
-        animation: spin 2s linear infinite;
-    }
-
-    .gears {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-
-    .footer {
-        position: absolute;
-        bottom: 20px;
-        font-size: 0.9rem;
-        color: #aaa;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .back-btn {
-        margin-top: 10px;
-        padding: 8px 20px;
-        font-size: 1rem;
-        color: #fff;
-        background: #ff6b6b;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-    }
-
-    .back-btn:hover {
-        background: #ff4b4b;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-        h1 { font-size: 2rem; }
-        p { font-size: 1rem; }
-        .gear { width: 50px; height: 50px; border-width: 5px; }
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISM Kerala - Ithihadu Shubbanil Mujahidheen</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
+
 <body>
-
-    <h1>Under Construction</h1>
-    <p>We are working hard to bring you a better experience. Stay tuned!</p>
-
-    <div class="gears">
-        <div class="gear"></div>
-        <div class="gear" style="animation-duration:3s;"></div>
-        <div class="gear" style="animation-duration:1.5s;"></div>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button id="lang-en" class="lang-btn active">English</button>
+        <button id="lang-ml" class="lang-btn">മലയാളം</button>
     </div>
 
-    <div class="footer">
-        &copy; 2025 Codex
-        <button class="back-btn" onclick="goBack()">Go Back</button>
-    </div>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="assets/images/ismlogo.png" alt="ISM Ernakulam Logo" class="logo">
+                    <span class="logo-text" data-en="ISM Ernakulam" data-ml="ഐ.എസ്.എം എറണാകുളം">ISM Kerala</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link" data-en="Home" data-ml="ഹോം">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link" data-en="About" data-ml="കുറിച്ച്">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#future-programs" class="nav-link" data-en="Future Programs"
+                            data-ml="ഭാവി പരിപാടികൾ">Future Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#activities" class="nav-link" data-en="Activities"
+                            data-ml="പ്രവർത്തനങ്ങൾ">Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#state-committee" class="nav-link" data-en="Our Leaders"
+                            data-ml="കമ്മിറ്റി">Our Leaders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#districts" class="nav-link" data-en="Zones" data-ml="മണ്ഡലങ്ങൾ">Districts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link" data-en="Contact" data-ml="ബന്ധപ്പെടുക">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<script>
-    function goBack() {
-        window.history.back();
-    }
-</script>
+    <!-- Hero Section with Carousel -->
+    <section id="home" class="hero">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="assets/images/carousel/dawah.jpg" alt="ISM Kerala" class="carousel-image">
+                <div class="carousel-content">
+                    <h1 data-en="Dawah" data-ml="ദഅ'വാ">Dawah</h1>
+                    <p data-en="Nurturing young Muslim hearts through comprehensive programs"
+                        data-ml="സമഗ്ര പരിപാടികളിലൂടെ യുവ മുസ്ലിം ഹൃദയങ്ങളെ പരിപോഷിപ്പിക്കുന്നു">
+                        Nurturing young Muslim hearts through comprehensive programs</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/images/carousel/inspire.jpg" alt="Education" class="carousel-image">
+                <div class="carousel-content">
+                    <h1 data-en="ISM Inspire" data-ml="ISM Inspire">ISM Inspire</h1>
+                    <p data-en="Exclusive Programs for Professionals"
+                        data-ml="പ്രൊഫഷണൽമാർക്കായി പ്രത്യേകമായി ഒരുക്കിയ പരിപാടികൾ">
+                        Exclusive Programs for Professionals</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/images/carousel/eelaf.jpg" alt="Community" class="carousel-image">
+                <div class="carousel-content">
+                    <h1 data-en="Eelaf" data-ml="ഈലാഫ്">Eelaf</h1>
+                    <p data-en="Building a better community through service"
+                        data-ml="സേവനത്തിലൂടെ മികച്ച സമൂഹം നിർമ്മിക്കുന്നു">Building a better community through service
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/images/carousel/qhls.jpg" alt="Community" class="carousel-image">
+                <div class="carousel-content">
+                    <h1 data-en="QHLS" data-ml="QHLS">QHLS</h1>
+                    <p data-en="Quran Hadith Learning School" data-ml="ഖുർആൻ ഹദീസ് ലേർണിംഗ് സ്കൂൾ ">Quran Hadith
+                        Learning School</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/images/carousel/velicham.jpg" alt="Community" class="carousel-image">
+                <div class="carousel-content">
+                    <h1 data-en="Velicham" data-ml="വെളിച്ചം">Velicham</h1>
+                    <p data-en="International Qur'an Learning Program" data-ml="അന്താരാഷ്‌ട്ര ഖുർആൻ പഠന പദ്ധതി">
+                        International Qur'an Learning Program</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/images/carousel/vichianthanam.jpg" alt="Community" class="carousel-image">
+                <div class="carousel-content">
+                    <h1 data-en="Vichinthanam" data-ml="വിചിന്തനം">Vichinthanam</h1>
+                    <p data-en="Offical Magzine of ISM" data-ml="ഐ എസ് എം ൻറെ മുഖ പത്രം">Offical Magzine of ISM</p>
+                </div>
+            </div>
+            <div class="carousel-nav">
+                <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+        </div>
+    </section>
 
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-en="About ISM" data-ml="ഐ.എസ്.എം നെ കുറിച്ച്">About ISM Kerala
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-en="ISM  is the youth wing of Kerala Nadvathul Mujahideen, dedicated to nurturing young Muslim hearts through comprehensive programs that blend spiritual growth, educational excellence, and social responsibility. ISM educate and enable muslims to follow pure Islam and fight against Shirk and Bida'ths.Our organization operates across 16 districts of Kerala as well as Other major indian cities and GCC countries, providing guidance and support to students and youth in their spiritual journey."
+                        data-ml="കെഎൻഎം (കേരള നദ്'വത്തുൽ  മുജാഹിദീന്‍) ൻറെ  യുവജന വിഭാഗമായ ഐ.എസ്.എം (ഇത്തിഹാദ് ഷുബ്ബാനിൽ മുജാഹിദീൻ ) ആത്മീയ വളർച്ച, വിദ്യാഭ്യാസ മികവ്, സാമൂഹിക ഉത്തരവാദിത്തം എന്നിവയെ സമന്വയിപ്പിക്കുന്ന സമഗ്രമായ പരിപാടികളിലൂടെ മുസ്ലിം യുവഹൃദയങ്ങളെ വളർത്തിപോറ്റുന്നതിലാണ് സമർപ്പിതമായിരിക്കുന്നത്. ശുദ്ധമായ ഇസ്ലാം പിന്തുടരാനും ശിർക്കും ബിദ്‌അത്തുകൾക്കും എതിരെ നിലകൊള്ളാനും മുസ്ലിംകളെ വിദ്യാഭ്യാസം നൽകുകയും ശക്തമാക്കുകയും ചെയ്യുന്നതാണ് ഐ.എസ്.എമ്മിന്റെ ലക്ഷ്യം. കേരളത്തിലെ 16 ജില്ലകളിലായി, കൂടാതെ മറ്റു പ്രധാന ഇന്ത്യൻ നഗരങ്ങളിലും ജിസിസി രാജ്യങ്ങളിലും ഞങ്ങളുടെ സംഘടന പ്രവർത്തിക്കുന്നു — വിദ്യാർത്ഥികളെയും യുവാക്കളെയും അവരുടെ ആത്മീയ യാത്രയിൽ നയിക്കുകയും പിന്തുണ നൽകുകയും ചെയ്യുന്നു.">
+                        ISM  is the youth wing of Kerala Nadvathul Mujahideen, dedicated to nurturing young Muslim
+                        hearts through comprehensive programs that blend spiritual growth, educational excellence, and
+                        social responsibility. ISM educate and enable muslims to follow pure Islam and fight against
+                        Shirk and Bida'ths.Our organization operates across 16 districts of Kerala as well as Other
+                        major indian cities and GCC countries, providing guidance and support to students and youth in
+                        their spiritual journey..</p>
+                    <a href="about/index.html" class="read-more-btn" data-en="Read More" data-ml="കൂടുതൽ വായിക്കുക">Read
+                        More</a>
+                </div>
+                <!-- <div class="about-image">
+                    <img src="assets/images/about.jpg" alt="About ISM Kerala">
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Near Future Programs Section -->
+    <section id="future-programs" class="future-programs">
+        <div class="container">
+            <h2 class="section-title" data-en="Upcoming Programs" data-ml="ഭാവി പരിപാടികൾ">Near Future Programs</h2>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <img src="assets/images/upcoming/future-program1.jpg" alt="Future Program">
+                    <div class="program-content">
+                        <h3 data-en="Youth Leadership Summit 2025" data-ml="യുവ നേതൃത്വ ശിഖര സമ്മേളനം 2025">
+                            Youth Leadership Summit 2025</h3>
+                        <p data-en="A comprehensive program to develop leadership skills among young Muslims"
+                            data-ml="യുവ മുസ്ലിംകളിൽ നേതൃത്വ കഴിവുകൾ വികസിപ്പിക്കുന്നതിനുള്ള സമഗ്ര പരിപാടി">
+                            A comprehensive program to develop leadership skills among young Muslims</p>
+                        <div class="program-date" data-en="Date: October 15-27, 2025"
+                            data-ml="തീയതി: മാർച്ച് 15-17, 2024">Date: October 15-27, 2025</div>
+                        <a href="futurepgm/index.html" class="read-more-btn" data-en="Read More"
+                            data-ml="കൂടുതൽ വായിക്കുക">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="activities">
+        <div class="container">
+            <h2 class="section-title" data-en="Our Activities" data-ml="ഞങ്ങളുടെ പ്രവർത്തനങ്ങൾ">Our Activities</h2>
+            <div class="activities-grid">
+                <div class="activity-card" onclick="window.location.href='qhls/index.html'">
+                    <div class="activity-icon">
+                        <img src="assets/images/activities/qhlslogo.png" alt="QHLS Logo">
+                    </div>
+                    <h3 data-en="Quran Hadith Learning School (QHLS)" data-ml="ഖുർആൻ ഹദീസ് ലേണിംഗ് സ്കൂൾ (QHLS)">
+                        Quran Hadith Learning School (QHLS)</h3>
+                    <p data-en="A well-structured curriculum designed to teach the Qur’an and Hadith through a specially crafted syllabus and examination system, implemented across hundreds of centers in Kerala and beyond — nurturing a generation grounded in authentic Islamic knowledge."
+                        data-ml="വിശേഷമായി രൂപകൽപ്പന ചെയ്ത പാഠ്യപദ്ധതിയും പരീക്ഷാ സംവിധാനവും വഴി ഖുര്‍ആനും ഹദീസും പഠിപ്പിക്കുന്ന, നൂറുകണക്കിന് കേന്ദ്രങ്ങളിൽ നടപ്പിലാക്കപ്പെട്ട ക്രമബദ്ധമായ പഠന സംവിധാനം — ശുദ്ധമായ ഇസ്ലാമിക അറിവിൽ അധിഷ്ഠിതമായ ഒരു തലമുറയെ വളർത്തിപോറ്റുന്നു.">
+                        A well-structured curriculum designed to teach the Qur’an and Hadith through a specially crafted
+                        syllabus and examination system, implemented across hundreds of centers in Kerala and beyond —
+                        nurturing a generation grounded in authentic Islamic knowledge.</p>
+                        <a href="qhls/index.html" class="read-more-btn" data-en="Read More" data-ml="കൂടുതൽ വായിക്കുക">Read
+                        More</a>
+                </div>
+                <div class="activity-card" onclick="window.location.href='velicham/index.html'">
+                    <div class="activity-icon">
+                        <img src="assets/images/activities/velichamlogo.png" alt="Velicham Logo">
+                    </div>
+                    <h3 data-en="Velicham" data-ml="വെളിച്ചം">Velicham</h3>
+                    <p data-en="Velicham is a structured, recurring Qur'an study initiative led by the ISM Kerala State Committee. With the goal of bringing the divine message of the Qur'an closer to people's lives, Velicham empowers individuals to reflect, understand, and act upon the timeless guidance of the Qur'an in a meaningful way."
+                        data-ml="വെളിച്ചം എന്നത് ഐ.എസ്.എം കേരള സ്റ്റേറ്റ് കമ്മിറ്റിയുടെ ആഭിമുഖ്യത്തിൽ സംഘടിപ്പിക്കുന്ന ക്രമബദ്ധമായ, സ്ഥിരമായി നടക്കുന്ന ഖുര്‍ആന്‍ പഠന പ്രസ്ഥാനം ആണ്. ഖുര്‍ആന്റെ ദിവ്യ സന്ദേശം മനുഷ്യരുടെ ജീവിതത്തോട് കൂടുതൽ അടുപ്പിക്കുന്നതിനായി രൂപകൽപ്പന ചെയ്ത വെളിച്ചം, വ്യക്തികളെ ഖുര്‍ആന്റെ നിത്യ മാർഗ്ഗനിർദേശങ്ങളെ ആലോചിക്കാൻ, മനസ്സിലാക്കാൻ, ജീവിതത്തിൽ പ്രാവർത്തികമാക്കാൻ പ്രാപ്തരാക്കുന്നു.">
+                        Velicham is a structured, recurring Qur'an study initiative led by the ISM Kerala State
+                        Committee. With the goal of bringing the divine message of the Qur'an closer to people's lives,
+                        Velicham empowers individuals to reflect, understand, and act upon the timeless guidance of the
+                        Qur'an in a meaningful way.</p>
+                        <a href="velicham/index.html" class="read-more-btn" data-en="Read More" data-ml="കൂടുതൽ വായിക്കുക">Read
+                        More</a>
+                </div>
+                <div class="activity-card" onclick="window.location.href='dawah/index.html'">
+                    <div class="activity-icon">
+                        <img src="assets/images/activities/dawahlogo.png" alt="Dawah Logo">
+                    </div>
+                    <h3 data-en="Dawah" data-ml="ദഅ'വാ">Dawah</h3>
+                    <p data-en="Dawah is at the heart of ISM’s mission — spreading the eternal message of Islam to people everywhere. Through individual and collective outreach initiatives, ISM inspires the youth to embody Islamic values and share them within society. With a thoughtful and compassionate approach, the Dawah activities aim to convey the truth, mercy, and peace of Islam to all humanity."
+                        data-ml="ദൗഅത്ത് ഐ.എസ്.എം പ്രവര്‍ത്തനങ്ങളുടെ ഹൃദയമാണെന്ന് പറയാം — ഇസ്ലാമിന്റെ ശാശ്വത സന്ദേശം ലോകമെമ്പാടുമുള്ള മനുഷ്യരിലേക്കെത്തിക്കാനുള്ള ദൗത്യം. വ്യക്തിഗതവും കൂട്ടായും നടത്തുന്ന പ്രചാരണ പരിപാടികളിലൂടെ, യുവാക്കളെ ഇസ്ലാമിക മൂല്യങ്ങൾ ഉൾക്കൊള്ളാനും, അത് സമൂഹത്തിൽ പ്രചരിപ്പിക്കാനും പ്രചോദിപ്പിക്കുന്നു. ബുദ്ധിപരവും ഹൃദയസ്പർശിയും ആയ സമീപനത്തിലൂടെ ദൗഅത്ത്, ഇസ്ലാമിന്റെ സത്യവും കരുണയും സമാധാനവും സമൂഹത്തിലേക്ക് വ്യാപിപ്പിക്കുന്നതാണ് ലക്ഷ്യം.">
+                        Dawah is at the heart of ISM’s mission — spreading the eternal message of Islam to people
+                        everywhere. Through individual and collective outreach initiatives, ISM inspires the youth to
+                        embody Islamic values and share them within society. With a thoughtful and compassionate
+                        approach, the Dawah activities aim to convey the truth, mercy, and peace of Islam to all
+                        humanity.</p>
+                        <a href="dawah/index.html" class="read-more-btn" data-en="Read More" data-ml="കൂടുതൽ വായിക്കുക">Read
+                        More</a>
+                </div>
+                <div class="activity-card" onclick="window.location.href='eelaf/index.html'">
+                    <div class="activity-icon">
+                        <img src="assets/images/activities/eelaflogo.png" alt="Eelaf Logo">
+                    </div>
+                    <h3 data-en="Eelaf" data-ml="ഈലാഫ്">Eelaf</h3>
+                    <p data-en="Eelaf focuses on nurturing unity, brotherhood, and social harmony within the community. It serves as ISM’s platform for building meaningful human connections rooted in Islamic values. Through welfare programs, social outreach, and community development activities, Eelaf strives to create a compassionate and cohesive society inspired by the teachings of the Qur’an and Sunnah."
+                        data-ml="ഈലാഫ് സമൂഹത്തിനുള്ളിൽ ഐക്യം, സഹോദരത്വം, സാമൂഹിക ഐക്യദാർഢ്യം എന്നിവ വളർത്തിപ്പോറ്റുന്നതിനായി പ്രവർത്തിക്കുന്ന ഐ.എസ്.എം.യുടെ ഒരു പ്രധാന ഉപാധിയാണ്. ഖുർആനും സുന്നത്തും അടിസ്ഥാനമാക്കിയുള്ള ദയയും കരുണയും നിറഞ്ഞ ഒരു സമൂഹത്തെ സൃഷ്ടിക്കുക എന്ന ലക്ഷ്യത്തോടെ, ഈലാഫ് സാമൂഹ്യക്ഷേമ പ്രവർത്തനങ്ങൾ, ജനസേവന പരിപാടികൾ, കമ്മ്യൂണിറ്റി വികസന പ്രവർത്തനങ്ങൾ എന്നിവ നടത്തി വരുന്നു.">
+                        Eelaf focuses on nurturing unity, brotherhood, and social harmony within the community. It
+                        serves as ISM’s platform for building meaningful human connections rooted in Islamic values.
+                        Through welfare programs, social outreach, and community development activities, Eelaf strives
+                        to create a compassionate and cohesive society inspired by the teachings of the Qur’an and
+                        Sunnah.</p>
+                        <a href="eelaf/index.html" class="read-more-btn" data-en="Read More" data-ml="കൂടുതൽ വായിക്കുക">Read
+                        More</a>
+                </div>
+                <div class="activity-card" onclick="window.location.href='vichinthanam/index.html'">
+                    <div class="activity-icon">
+                        <img src="assets/images/activities/vichinthanamlogo.png" alt="Vichinthanam Logo">
+                    </div>
+                    <h3 data-en="Vichinthanam" data-ml="വിചിന്തനം">Vichinthanam</h3>
+                    <p data-en="Vichinthanam, a platform that nurtures discernment and awareness, is the official weekly publication of ISM. Its aim is to deeply observe subjects such as religion, society, culture, and education, to awaken the thinking of the younger generation, and to guide them towards a correct Islamic perspective. This publication, which opens avenues for reflection and discussion, serves as a heritage platform that strengthens ISM’s mission both spiritually and intellectually."
+                        data-ml="വിവേചനാശക്തിയും ബോധവത്കരണവും വളർത്തുന്ന വേദിയായ 'വിചിന്തനം' ഐ.എസ്.എം.യുടെ ഔദ്യോഗിക ആഴ്ചപ്പതിപ്പാണ്. മതം, സമൂഹം, സംസ്കാരം, വിദ്യാഭ്യാസം തുടങ്ങിയ വിഷയങ്ങളെ ആഴത്തിൽ നിരീക്ഷിച്ച് യുവതലമുറയുടെ ചിന്തയെ ഉണർത്തുകയും ശരിയായ ഇസ്ലാമിക ദർശനത്തിലേക്ക് നയിക്കുകയും ചെയ്യുകയാണ് വിചിന്തനത്തിന്റെ ലക്ഷ്യം. ചിന്തയ്ക്കും ചർച്ചയ്ക്കും മാർഗം തുറക്കുന്ന ഈ പ്രസിദ്ധീകരണം, ഐ.എസ്.എം.യുടെ ദൗത്യത്തെ ആത്മീയമായും ബൗദ്ധികമായും ശക്തിപ്പെടുത്തുന്ന ഒരു പൈതൃക വേദിയാണ്.">
+                        Vichinthanam, a platform that nurtures discernment and awareness, is the official weekly
+                        publication of ISM. Its aim is to deeply observe subjects such as religion, society, culture,
+                        and education, to awaken the thinking of the younger generation, and to guide them towards a
+                        correct Islamic perspective. This publication, which opens avenues for reflection and
+                        discussion, serves as a heritage platform that strengthens ISM’s mission both spiritually and
+                        intellectually.</p>
+                        <a href="http://vichinthanamweekly.com/" class="read-more-btn" data-en="Read More" data-ml="കൂടുതൽ വായിക്കുക">Read
+                        More</a>
+                </div>
+                <div class="activity-card" onclick="window.location.href='inspire/index.html'">
+                    <div class="activity-icon">
+                        <img src="assets/images/activities/inspirelogo.png" alt="Inspire Logo">
+                    </div>
+                    <h3 data-en="Inspire" data-ml="ഇൻസ്പയർ">Inspire</h3>
+                    <p data-en="Dive into a transformative journey of knowledge and spirituality with ISM Inspire! this specially crafted series of interactive Islamic sessions is dedicated to cultivating a scholarly audience among professionals, both within and beyond the borders of Kerala. Our primary mission is To elevate religious awareness and upskill the spiritual journey of professionals like you."
+                        data-ml="Dive into a transformative journey of knowledge and spirituality with ISM Inspire! this specially crafted series of interactive Islamic sessions is dedicated to cultivating a scholarly audience among professionals, both within and beyond the borders of Kerala. Our primary mission is To elevate religious awareness and upskill the spiritual journey of professionals like you.">
+                        Dive into a transformative journey of knowledge and spirituality with ISM Inspire! this
+                        specially crafted series of interactive Islamic sessions is dedicated to cultivating a scholarly
+                        audience among professionals, both within and beyond the borders of Kerala. Our primary mission
+                        is To elevate religious awareness and upskill the spiritual journey of professionals like you.
+                    </p>
+                    <a href="https://isminspire.com/" class="read-more-btn" data-en="Read More" data-ml="കൂടുതൽ വായിക്കുക">Read
+                        More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- State Committee Section -->
+    <section id="state-committee" class="state-committee">
+        <div class="container">
+            <h2 class="section-title" data-en="Our Leaders" data-ml="കമ്മിറ്റി">Our Leaders</h2>
+            <div class="committee-grid">
+                <div class="committee-member president">
+                    <img src="assets/images/committee/zubair.jpg" alt="President">
+                    <h3 data-en="President" data-ml="പ്രസിഡന്റ്">President</h3>
+                    <p>Zubair Peediakkal</p>
+                </div>
+                <div class="committee-member secretary">
+                    <img src="assets/images/committee/pharish.jpg" alt="Secretary">
+                    <h3 data-en="Secretary" data-ml="സെക്രട്ടറി">Secretary</h3>
+                    <p>Pharish PH</p>
+                </div>        
+                <div class="committee-member treasurer">
+                    <img src="assets/images/committee/ansal.jpg" alt="Treasurer">
+                    <h3 data-en="Treasurer" data-ml="ട്രഷറർ">Treasurer</h3>
+                    <p>Ansal Pallikkara</p>
+                </div>
+                <div class="committee-member vice-president">
+                    <img src="assets/images/committee/anas.jpg" alt="Vice President">
+                    <h3 data-en="Vice President" data-ml="വൈസ് പ്രസിഡന്റ്">Vice President</h3>
+                    <p>Anas Nadvi</p>
+                </div>
+                <div class="committee-member vice-president">
+                    <img src="assets/images/committee/aslam.jpg" alt="Vice President">
+                    <h3 data-en="Vice President" data-ml="വൈസ് പ്രസിഡന്റ്">Vice President</h3>
+                    <p>Aslam Palluruthi</p>
+                </div>                
+                <div class="committee-member joint-secretary">
+                    <img src="assets/images/committee/rafeek.jpg" alt="Joint Secretary">
+                    <h3 data-en="Joint Secretary" data-ml="ജോയിന്റ് സെക്രട്ടറി">Joint Secretary</h3>
+                    <p>Rafeek Kalamassery</p>
+                </div>
+                <div class="committee-member joint-secretary">
+                    <img src="assets/images/committee/unais.jpg" alt="Joint Secretary">
+                    <h3 data-en="Joint Secretary" data-ml="ജോയിന്റ് സെക്രട്ടറി">Joint Secretary</h3>
+                    <p>Unais MA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Districts Section -->
+    <section id="districts" class="districts">
+        <div class="container">
+            <h2 class="section-title" data-en="Zones" data-ml="മണ്ഡലങ്ങൾ">Zones</h2>
+            <div id="kerala-map" style="height: 600px; width: 80%; margin-right: 20%; margin-left: 10%; "></div>
+            <div class="district-legend">
+                <h3 data-en="Click on zone to visit" data-ml="മണ്ഡലങ്ങൾ ക്ലിക്ക് ചെയ്ത് പേജ് സന്ദർശിക്കുക">
+                    Click on zone to visit
+                </h3>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-en="Contact Us" data-ml="ബന്ധപ്പെടുക">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3 data-en="Address" data-ml="വിലാസം">Address</h3>
+                            <p>ISM Office, Pulleppady Salafi Msjid Complex<br>Pullepady, Ernakulam-4<br>Kerala, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3 data-en="Phone" data-ml="ഫോൺ">Phone</h3>
+                            <p>+91 9847751515</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3 data-en="Email" data-ml="ഇമെയിൽ">Email</h3>
+                            <p>ismeelafekm@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe
+                        src="https://www.google.com/maps?q=9.9844155,76.2847007&output=embed"
+                        width="100%"
+                        height="300"
+                        style="border:0; margin-right: 10%;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-en="ISM Ernakulam" data-ml="ഐ.എസ്.എം എറണാകുളം ">ISM Ernakulam</h3>
+                    <p data-en="Nurturing young Muslim hearts through comprehensive programs"
+                        data-ml="സമഗ്ര പരിപാടികളിലൂടെ യുവ മുസ്ലിം ഹൃദയങ്ങളെ പരിപോഷിപ്പിക്കുന്നു">Nurturing young Muslim
+                        minds through comprehensive programs</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-en="Quick Links" data-ml="ദ്രുത ലിങ്കുകൾ">Quick Links</h3>
+                    <ul>
+                        <li><a href="#about" data-en="About" data-ml="കുറിച്ച്">About</a></li>
+                        <li><a href="#activities" data-en="Activities" data-ml="പ്രവർത്തനങ്ങൾ">Activities</a></li>
+                        <li><a href="#districts" data-en="Zones" data-ml="മണ്ഡലങ്ങൾ ">Zones</a></li>
+                        <li><a href="#contact" data-en="Contact" data-ml="ബന്ധപ്പെടുക">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-en="Follow Us" data-ml="ഞങ്ങളെ പിന്തുടരുക">Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@ismernakulam262" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://whatsapp.com/channel/0029VaAfj9C96H4XexaHHA1r" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ISM . All rights reserved.</p>
+                <p>@Powered By gatepass.codex@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
+
 </html>
