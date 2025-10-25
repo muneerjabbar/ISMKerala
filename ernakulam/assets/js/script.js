@@ -146,7 +146,22 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
+  
+// Falaq programs expiry check
+document.addEventListener('DOMContentLoaded', function() {
+    const futureProgramsSection = document.getElementById('falaq');
+    const programDate = '2030-11-04'; // Set your expiry date here
     
+    function checkProgramExpiry() {
+        const today = new Date();
+        const expiryDate = new Date(programDate);
+        
+        if (today > expiryDate) {
+            if (futureProgramsSection) {
+                futureProgramsSection.classList.add('hidden');
+            }
+        }
+    }    
     // Check on page load
     checkProgramExpiry();
     
