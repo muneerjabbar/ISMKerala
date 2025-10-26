@@ -341,11 +341,11 @@ document.addEventListener('DOMContentLoaded', function() {
 const qhlsData = [
   {
     zone: "Kakkanad",
-    convenor: { name: "Riyas", phone: "111112222" },
+    convenor: { name: "Riyas", phone: "8891110025" },
     units: [
-      { name: "Kakkanad", convenor: "Muneer", phone: "9400095648" },
-      { name: "Athani", convenor: "Faisal Rahim", phone: "222223333" },
-      { name: "Cheranaloor", convenor: "Nizar P", phone: "88888888" }
+      { name: "Kakkanad", convenor: "Riyas", phone: "8891110025" },
+      { name: "Athani", convenor: "Muneer", phone: "9400095648" },
+      { name: "Kalamassery", convenor: "Dr Ajees", phone: "9061859697" }
     ]
   },
   {
@@ -377,7 +377,7 @@ qhlsData.forEach((zone, index) => {
 
   item.innerHTML = `
     <div class="accordion-header">
-        <span>Zone ${index + 1} - ${zone.zone}</span>
+        <span>${zone.zone}</span>
         <span class="arrow">▶</span>
     </div>
     <div class="accordion-content ${index === 0 ? "active" : ""}">
@@ -388,8 +388,9 @@ qhlsData.forEach((zone, index) => {
         </div>
         ${zone.units.map(unit => `
             <div class="unit">
-                <span><strong>${unit.name} Unit:</strong> ${unit.convenor}</span>
-                <a href="tel:${unit.phone}" class="call-icon">📞</a>
+                <span><strong>${unit.name}:</strong> ${unit.convenor}</span>
+                <a href="tel:${unit.phone}" class="call-icon">📞</a> | 
+                ${unit.phone}
             </div>
         `).join('')}
     </div>
