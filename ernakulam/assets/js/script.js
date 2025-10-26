@@ -336,3 +336,84 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });  
+
+// 🕌 QHLS Centers Data as JSON
+const qhlsData = [
+  {
+    zone: "Kakkanad",
+    convenor: { name: "Riyas", phone: "111112222" },
+    units: [
+      { name: "Kakkanad", convenor: "Muneer", phone: "9400095648" },
+      { name: "Athani", convenor: "Faisal Rahim", phone: "222223333" },
+      { name: "Cheranaloor", convenor: "Nizar P", phone: "88888888" }
+    ]
+  },
+  {
+    zone: "Kochi",
+    convenor: { name: "Haris Muhammed", phone: "9812345678" },
+    units: [
+      { name: "Kochi", convenor: "Junaid K", phone: "9945012345" },
+      { name: "Kochiunit", convenor: "Shafeeq A", phone: "9098012345" },
+      { name: "Kochi west", convenor: "Noufal K", phone: "9812341098" }
+    ]
+  },
+  {
+    zone: "Vyttila",
+    convenor: { name: "Rashid Ahamed", phone: "9745612345" },
+    units: [
+      { name: "Chakkaraparambu", convenor: "Muhsin P", phone: "9876512340" },
+      { name: "Vyttila", convenor: "Hameed K", phone: "9090909090" },
+      { name: "unit3", convenor: "Jaleel R", phone: "9847012345" }
+    ]
+  }
+];
+
+// 🧱 Render Accordion Dynamically
+const accordionContainer = document.getElementById("accordionContainer");
+
+qhlsData.forEach((zone, index) => {
+  const item = document.createElement("div");
+  item.className = "accordion-item";
+
+  item.innerHTML = `
+    <div class="accordion-header">
+        <span>Zone ${index + 1} - ${zone.zone}</span>
+        <span class="arrow">▶</span>
+    </div>
+    <div class="accordion-content ${index === 0 ? "active" : ""}">
+        <div class="zone-convenor">
+            Zone Convenor: <strong>${zone.convenor.name}</strong> 
+            <a href="tel:${zone.convenor.phone}" class="call-icon">📞</a> | 
+            ${zone.convenor.phone}
+        </div>
+        ${zone.units.map(unit => `
+            <div class="unit">
+                <span><strong>${unit.name} Unit:</strong> ${unit.convenor}</span>
+                <a href="tel:${unit.phone}" class="call-icon">📞</a>
+            </div>
+        `).join('')}
+    </div>
+  `;
+
+  accordionContainer.appendChild(item);
+});
+
+// 🔄 Accordion Functionality
+const headers = document.querySelectorAll(".accordion-header");
+headers.forEach(header => {
+  header.addEventListener("click", () => {
+    const content = header.nextElementSibling;
+    const arrow = header.querySelector(".arrow");
+
+    // Collapse all
+    document.querySelectorAll(".accordion-content").forEach(c => c.classList.remove("active"));
+    document.querySelectorAll(".arrow").forEach(a => a.classList.remove("rotate"));
+
+    // Expand selected
+    content.classList.add("active");
+    arrow.classList.add("rotate");
+  });
+});
+
+// Keep first arrow rotated initially
+document.querySelector(".accordion-item .arrow").classList.add("rotate");

@@ -1273,3 +1273,91 @@ html {
     stroke: #000;
     stroke-width: 1px;
   }
+
+/* QHLS styles */
+
+  h2 {
+        text-align: center;
+        color: #0a7c7c;
+        margin-bottom: 20px;
+    }
+
+    .accordion {
+        width: 100%;
+        max-width: 750px;
+        margin: 0 auto;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .accordion-item {
+        border-bottom: 1px solid #ddd;
+        background: white;
+    }
+
+    .accordion-header {
+        background-color: #0a7c7c;
+        color: white;
+        cursor: pointer;
+        padding: 15px 20px;
+        text-align: left;
+        font-size: 18px;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background 0.3s ease;
+    }
+
+    .accordion-header:hover {
+        background-color: #0c8e8e;
+    }
+
+    .accordion-content {
+        padding: 15px 20px;
+        display: none;
+        background-color: #fff;
+    }
+
+    .accordion-content.active {
+        display: block;
+    }
+
+    .zone-convenor {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .unit {
+        padding-left: 10px;
+        margin-bottom: 8px;
+        border-left: 3px solid #0a7c7c;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .unit strong {
+        color: #0a7c7c;
+    }
+
+    .call-icon {
+        text-decoration: none;
+        color: #0a7c7c;
+        font-size: 20px;
+        margin-left: 8px;
+    }
+
+    .call-icon:hover {
+        color: #087070;
+    }
+
+    .arrow {
+        transition: transform 0.3s ease;
+    }
+
+    .arrow.rotate {
+        transform: rotate(90deg);
+    }
