@@ -383,13 +383,13 @@ qhlsData.forEach((zone, index) => {
     <div class="accordion-content ${index === 0 ? "active" : ""}">
         <div class="zone-convenor">
             Zone Convenor: <strong>${zone.convenor.name}</strong> 
-            <a href="tel:${zone.convenor.phone}" class="call-icon">📞</a> | 
+            <a href="tel:${zone.convenor.phone}" class="call-icon">📞</a> 
             ${zone.convenor.phone}
         </div>
         ${zone.units.map(unit => `
             <div class="unit">
-                <span><strong>${unit.name}:</strong> ${unit.convenor}</span>
-                <a href="tel:${unit.phone}" class="call-icon">📞</a> | 
+                <strong>${unit.name}:</strong> ${unit.convenor}
+                <a href="tel:${unit.phone}" class="call-icon">📞</a> 
                 ${unit.phone}
             </div>
         `).join('')}
