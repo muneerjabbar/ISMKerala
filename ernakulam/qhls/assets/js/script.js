@@ -132,14 +132,14 @@ const qhlsData = [
   },
   {
     zone: "Muvattupuzha",
-    convenor: { name: "Rashid C", phone: "8891110025" },
+    convenor: { name: "Iqbal", phone: "9526155839" },
     units: [
       { name: "Punnamattam", convenor: "Mansoor A", phone: "8891110025" },
-      { name: "Paipra", convenor: "Shameem C", phone: "8891110025" },
+      { name: "Paipra", convenor: "Iqbal", phone: "9526155839" },
       { name: "Perumattam", convenor: "Suhail K", phone: "8891110025" },
       { name: "Kizhakkekkara", convenor: "Anas T", phone: "8891110025" },
       { name: "Mulavoor", convenor: "Haris P", phone: "8891110025" },
-      { name: "Muvattupuzha", convenor: "Ashraf N", phone: "8891110025" }
+      { name: "Muvattupuzha", convenor: "Noufal", phone: "9400916174" }
     ]
   },
   {
