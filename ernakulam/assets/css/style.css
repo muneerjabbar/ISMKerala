@@ -91,7 +91,7 @@ body {
 .logo {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 8px;
 }
 
 .logo-text {
@@ -1466,3 +1466,12 @@ html {
     font-size: 0.95rem;
   }
 }
+.dis-act-wrap {
+
+@media (min-width: 992px) {
+   display: flex;
+}
+
+
+
+  }
