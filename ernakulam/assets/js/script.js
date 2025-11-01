@@ -134,7 +134,7 @@ function navigateToDistrict(districtName) {
 // Future programs expiry check
 document.addEventListener('DOMContentLoaded', function() {
     const futureProgramsSection = document.getElementById('future-programs');
-    const programDate = '2025-11-04'; // Set your expiry date here
+    const programDate = '2025-10-04'; // Set your expiry date here
     
     function checkProgramExpiry() {
         const today = new Date();
