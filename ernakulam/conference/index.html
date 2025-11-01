@@ -14,65 +14,66 @@
 
 <body class="conf">
 
-<style type="text/css">
-
-    .conf .navbar {
-        padding: 0;
-    }
-    .conf .navbar .nav-container {
-        height: 50px;
-    }
-     .conf section {
-      @media (max-width: 768px) {
-             padding: 30px 0;
-         }
-    }
-    .conf .section-title {
-    @media (max-width: 768px) {
-        font-size: 1.5rem;
+    <style type="text/css">
+        .conf .navbar {
+            padding: 0;
         }
-    }
-</style>
 
-<!-- Header -->
-<header class="header">
-    <nav class="navbar">
-        <div class="nav-container">
-            <!-- Left side: Logo and title -->
-            <div class="nav-logo">
-                <img src="../assets/images/ismlogo.png" alt="ISM Logo" class="logo">
-                <span class="logo-text">Conference</span>
+        .conf .navbar .nav-container {
+            height: 50px;
+        }
+
+        .conf section {
+            @media (max-width: 768px) {
+                padding: 30px 0;
+            }
+        }
+
+        .conf .section-title {
+            @media (max-width: 768px) {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Left side: Logo and title -->
+                <div class="nav-logo"><a href="../index.html">
+                    <img src="../assets/images/ismlogo.png" alt="ISM Logo" class="logo"></a>
+                    <span class="logo-text">Conference</span>
+                </div>
+
+                <!-- Right side: Result Buttosn -->
+                <div class="nav-result">
+                    <a href="./schedule" class="result-button">
+                        Schedule
+                    </a>
+                </div>
             </div>
+        </nav>
+    </header>
 
-            <!-- Right side: Result Buttosn -->
-            <div class="nav-result">
-                <a href="./schedule"  class="result-button">
-                    Schedule
-                </a>
-            </div>
-        </div>
-    </nav>
-</header>
 
-   
     <!-- Live Section -->
     <section id="live" class="about">
-    <div class="container">
-        <h2 class="section-title">🏛️ ISM Conference Live</h2>
-        <div class="about-content">
-            <div class="about-image" id="liveContainer">
-                <article style="width: 100% !important;">
-                    <iframe width="100%" height="450" class="pro-iframe"
-                        src="https://www.youtube.com/embed/5AihsUz6Jds?autoplay=1"
-                        title="ISM Conference Live"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    </iframe>
-                </article>
+        <div class="container">
+            <h2 class="section-title">🏛️ ISM Conference Live</h2>
+            <div class="about-content">
+                <div class="about-image" id="liveContainer">
+                    <article style="width: 100% !important;">
+                        <iframe width="100%" height="450" class="pro-iframe"
+                            src="https://www.youtube.com/embed/5AihsUz6Jds?autoplay=1" title="ISM Conference Live"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </article>
+                </div>
             </div>
         </div>
-    </div>
     </section>
 
 
@@ -83,11 +84,15 @@
                 <div class="footer-section">
                     <h3 data-en="Follow Us" data-ml="ഞങ്ങളെ പിന്തുടരുക">Follow Us</h3>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/share/1BSHXaHqNy/" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/share/1BSHXaHqNy/" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
                         <!-- <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a> -->
-                        <a href="https://www.instagram.com/ismernakulam?utm_source=qr&igsh=MTA2Ym81eTAzYTk1Zg==" target="_blank"><i class="fab fa-instagram"></i></a> 
-                        <a href="https://www.youtube.com/@ismernakulam262" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="https://whatsapp.com/channel/0029VaAfj9C96H4XexaHHA1r" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/ismernakulam?utm_source=qr&igsh=MTA2Ym81eTAzYTk1Zg=="
+                            target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@ismernakulam262" target="_blank"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://whatsapp.com/channel/0029VaAfj9C96H4XexaHHA1r" target="_blank"><i
+                                class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
@@ -104,7 +109,7 @@
     <script src="./assets/js/breakpoints.min.js"></script>
     <script src="./assets/js/flipclock.min.js"></script>
     <script src="./assets/js/util.js"></script>
-    <script src="./assets/js/main.js"></script>    
+    <script src="./assets/js/main.js"></script>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
 
