@@ -12,7 +12,27 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 
-<body>
+<body class="conf">
+
+<style type="text/css">
+
+    .conf .navbar {
+        padding: 0;
+    }
+    .conf .navbar .nav-container {
+        height: 50px;
+    }
+     .conf section {
+      @media (max-width: 768px) {
+             padding: 30px 0;
+         }
+    }
+    .conf .section-title {
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+        }
+    }
+</style>
 
 <!-- Header -->
 <header class="header">
@@ -24,10 +44,10 @@
                 <span class="logo-text">Conference</span>
             </div>
 
-            <!-- Right side: Result Button -->
+            <!-- Right side: Result Buttosn -->
             <div class="nav-result">
-                <a href="#live" target="_blank" class="result-button">
-                    🔴▶️ Live
+                <a href="./schedule"  class="result-button">
+                    Schedule
                 </a>
             </div>
         </div>
