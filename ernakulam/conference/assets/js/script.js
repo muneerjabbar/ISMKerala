@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Configurable values
   const totalImages = 53; // Adjust for your count
-  const batchSize = 30; // Load 30 thumbnails per scroll
+  const batchSize = 5; // Load 5 thumbnails per scroll
   let loadedCount = 0;
   let allImages = [];
   let currentIndex = 0;
