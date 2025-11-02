@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISM Ernakulam Website Launch</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #021425, #000);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+  }
+
+  .logo {
+    width: 180px;
+    height: auto;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease forwards, float 3s ease-in-out infinite;
+  }
+
+  .launch-btn {
+    margin-top: 20px;
+    padding: 15px 40px;
+    font-size: 1.5rem;
+    color: #fff;
+    background: linear-gradient(90deg, #e60026, #ff3c5f);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(255, 0, 50, 0.8);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+  }
+
+  .launch-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(255, 255, 100, 0.9);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 10px #ff3c5f, 0 0 20px #ff3c5f; }
+    50% { box-shadow: 0 0 30px #ffcc00, 0 0 60px #ffcc00; }
+    100% { box-shadow: 0 0 10px #ff3c5f, 0 0 20px #ff3c5f; }
+  }
+
+  /* Glitter animation */
+  .glitter {
+    position: absolute;
+    background: gold;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    top: -10px;
+    opacity: 0.9;
+    pointer-events: none;
+  }
+
+  @keyframes fall {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+  }
+
+  /* Flash background */
+  .flash {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    opacity: 0;
+    pointer-events: none;
+    animation: flashAnim 1s ease-in-out forwards;
+  }
+
+  @keyframes flashAnim {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  .fadeout {
+    animation: fadeOut 1.5s ease forwards;
+  }
+
+  @keyframes fadeOut {
+    to { opacity: 0; transform: scale(2); }
+  }
+
+
+</style>
+</head>
+<body>
+  <img src="../assets/images/ismlogo.png" alt="ISM Ernakulam Logo" class="logo" />
+  <button class="launch-btn" id="launchBtn">🎉 Launch Website 🎉</button>
+
+  <script>
+    const btn = document.getElementById('launchBtn');
+
+    btn.addEventListener('click', () => {
+      btn.disabled = true;
+      btn.textContent = "🚀 Launching...";
+      document.body.style.overflow = 'hidden';
+
+ 
+      // Step 1: Glitter effect
+      for (let i = 0; i < 1000; i++) {
+        const g = document.createElement('div');
+        g.classList.add('glitter');
+        g.style.left = Math.random() * window.innerWidth + 'px';
+        g.style.background = Math.random() > 0.5 ? 'gold' : '#ff3c5f';
+        g.style.animation = `fall ${2 + Math.random() * 4}s linear forwards`;
+        g.style.width = g.style.height = Math.random() * 6 + 'px';
+        document.body.appendChild(g);
+        setTimeout(() => g.remove(), 5000);
+      }
+
+      // Step 2: Random flashes for effect
+      const flashCount = 3;
+      for (let i = 0; i < flashCount; i++) {
+        setTimeout(() => {
+          const flash = document.createElement('div');
+          flash.classList.add('flash');
+          document.body.appendChild(flash);
+          setTimeout(() => flash.remove(), 1000);
+        }, 500 * i + 500);
+      }
+
+      // Step 3: Fade out and redirect after ~10s
+      setTimeout(() => {
+        document.body.classList.add('fadeout');
+        setTimeout(() => {
+          window.location.href = "https://www.ismkerala.com/ernakulam/";
+        }, 1500);
+      }, 3000);
+    });
+  </script>
+</body>
+</html>

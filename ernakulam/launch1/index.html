@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ISM Ernakulam – Launch</title>
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #002b5c 0%, #000 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.launch-container {
+  text-align: center;
+  z-index: 2;
+}
+
+.launch-logo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  animation: pulse 2s infinite alternate;
+}
+
+.launch-button {
+  padding: 14px 40px;
+  font-size: 1.2rem;
+  color: white;
+  background: linear-gradient(90deg, #0fd850, #f9f047);
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.launch-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255,255,255,0.6);
+}
+
+/* sparkles */
+canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* animations */
+@keyframes pulse {
+  from { opacity: 0.8; transform: scale(1); }
+  to   { opacity: 1; transform: scale(1.05); }
+}
+</style>
+</head>
+<body>
+<canvas id="sparkle"></canvas>
+
+<div class="launch-container">
+  <div class="launch-logo">🏛️ ISM Ernakulam</div>
+  <button class="launch-button" id="launchBtn">Launch Website</button>
+</div>
+
+<script>
+// simple particle burst effect
+const canvas = document.getElementById("sparkle");
+const ctx = canvas.getContext("2d");
+let particles = [];
+function resize(){canvas.width=innerWidth; canvas.height=innerHeight;}
+window.addEventListener("resize", resize);
+resize();
+
+function createParticles(x, y, count = 60){
+  for(let i=0; i<count; i++){
+    particles.push({
+      x, y,
+      size: Math.random()*4+1,
+      color: `hsl(${Math.random()*360},100%,60%)`,
+      speedX: (Math.random()-0.5)*6,
+      speedY: (Math.random()-0.5)*6,
+      life: 100
+    });
+  }
+}
+
+function animate(){
+  ctx.fillStyle = "rgba(0,0,0,0.15)";
+  ctx.fillRect(0,0,canvas.width,canvas.height);
+  particles.forEach((p, i) => {
+    p.x += p.speedX;
+    p.y += p.speedY;
+    p.life--;
+    ctx.fillStyle = p.color;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.size, 0, Math.PI*2);
+    ctx.fill();
+    if(p.life<=0) particles.splice(i,1);
+  });
+  requestAnimationFrame(animate);
+}
+animate();
+
+document.getElementById("launchBtn").addEventListener("click", e=>{
+  const rect = e.target.getBoundingClientRect();
+  createParticles(rect.left + rect.width/2, rect.top + rect.height/2);
+  e.target.textContent = "Launching...";
+  e.target.disabled = true;
+  e.target.style.opacity = "0.6";
+  setTimeout(()=>{
+    document.body.style.transition="opacity 1.5s ease";
+    document.body.style.opacity="0";
+    setTimeout(()=>{
+      window.location.href="https://www.ismkerala.com/ernakulam/";
+    },1500);
+  },1200);
+});
+</script>
+</body>
+</html>
