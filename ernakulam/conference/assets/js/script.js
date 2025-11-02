@@ -19,47 +19,62 @@ document.addEventListener("DOMContentLoaded", () => {
   const nextBtn = document.querySelector(".next");
   const prevBtn = document.querySelector(".prev");
 
+  // Configurable values
+  const totalImages = 5; // Adjust for your count
+  const batchSize = 3; // Load 1 thumbnail per scroll
+  let loadedCount = 0;
+  let allImages = [];
   let currentIndex = 0;
-  let images = [];
-  
-  // ⚙️ Specify total images or dynamically generate if needed
-  const totalImages = 5; // adjust to your actual image count
+
+  // Pre-generate all image paths
   const imageList = Array.from({ length: totalImages }, (_, i) => `./gallery/${i + 1}.jpg`);
 
-  // Create placeholder thumbnails with lazy loading
-  imageList.forEach((src, index) => {
-    const img = document.createElement("img");
-    img.dataset.src = src; // lazy load source
-    img.alt = `Gallery ${index + 1}`;
-    img.loading = "lazy";
-    img.addEventListener("click", () => openLightbox(index));
-    galleryContainer.appendChild(img);
-  });
+  // Load next batch when needed
+  function loadNextBatch() {
+    const nextImages = imageList.slice(loadedCount, loadedCount + batchSize);
+    nextImages.forEach((src, index) => {
+      const img = document.createElement("img");
+      img.dataset.src = src;
+      img.alt = `Gallery ${loadedCount + index + 1}`;
+      img.loading = "lazy";
+      img.addEventListener("click", () => openLightbox(loadedCount + index));
+      galleryContainer.appendChild(img);
+      observer.observe(img);
+    });
+    loadedCount += nextImages.length;
+    if (loadedCount >= totalImages) {
+      loadingIndicator.textContent = "All images loaded.";
+    }
+  }
 
-  images = document.querySelectorAll(".gallery-grid img");
-
-  // ====== Lazy Loading with IntersectionObserver ======
-  const observer = new IntersectionObserver((entries, observer) => {
+  // Lazy-load actual image when visible
+  const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target;
         img.src = img.dataset.src;
-        observer.unobserve(img);
+        obs.unobserve(img);
       }
     });
-  }, {
-    rootMargin: "200px"
-  });
+  }, { rootMargin: "300px" });
 
-  images.forEach(img => observer.observe(img));
+  // Load first batch
+  loadNextBatch();
 
-  loadingIndicator.style.display = "none";
+  // Infinite scroll logic
+  const scrollObserver = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && loadedCount < totalImages) {
+      loadNextBatch();
+    }
+  }, { rootMargin: "1000px" });
+  scrollObserver.observe(loadingIndicator);
 
-  // ====== LIGHTBOX FUNCTIONS ======
+  // ====== LIGHTBOX ======
   function openLightbox(index) {
+    allImages = Array.from(galleryContainer.querySelectorAll("img"));
     currentIndex = index;
     lightbox.style.display = "flex";
-    lightboxImg.src = images[currentIndex].dataset.src;
+    lightboxImg.src = allImages[currentIndex].dataset.src;
   }
 
   function closeLightbox() {
@@ -67,13 +82,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function showNext() {
-    currentIndex = (currentIndex + 1) % images.length;
-    lightboxImg.src = images[currentIndex].dataset.src;
+    currentIndex = (currentIndex + 1) % allImages.length;
+    lightboxImg.src = allImages[currentIndex].dataset.src;
   }
 
   function showPrev() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    lightboxImg.src = images[currentIndex].dataset.src;
+    currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+    lightboxImg.src = allImages[currentIndex].dataset.src;
   }
 
   closeBtn.addEventListener("click", closeLightbox);
