@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = document.querySelector(".prev");
 
   // Configurable values
-  const totalImages = 55; // Adjust for your count
-  const batchSize = 3; // Load 1 thumbnail per scroll
+  const totalImages = 53; // Adjust for your count
+  const batchSize = 30; // Load 30 thumbnails per scroll
   let loadedCount = 0;
   let allImages = [];
   let currentIndex = 0;
