@@ -1,155 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ISM Ernakulam Website Launch</title>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: radial-gradient(circle at center, #021425, #000);
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insha'Allah — Launch</title>
+  <style>
+    :root {
+      --bg: #04261b;
+      --gold: #d4af37;
+      --light-gold: #ffd66b;
+    }
 
-  .logo {
-    width: 180px;
-    height: auto;
-    margin-bottom: 30px;
-    animation: fadeIn 2s ease forwards, float 3s ease-in-out infinite;
-  }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  .launch-btn {
-    margin-top: 20px;
-    padding: 15px 40px;
-    font-size: 1.5rem;
-    color: #fff;
-    background: linear-gradient(90deg, #e60026, #ff3c5f);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 0 25px rgba(255, 0, 50, 0.8);
-    transition: all 0.3s ease;
-    animation: pulse 2s infinite;
-  }
+    body {
+      height: 100vh;
+      background: linear-gradient(180deg, #04261b 0%, #083826 100%);
+      font-family: "Segoe UI", Roboto, sans-serif;
+      color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
 
-  .launch-btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 40px rgba(255, 255, 100, 0.9);
-  }
+    .card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+      width: min(700px, 90%);
+      overflow: hidden;
+    }
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
-  }
+    h1 {
+      font-size: 1.8rem;
+      color: var(--light-gold);
+      margin-bottom: 8px;
+    }
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-  }
+    .arabic {
+      font-family: 'Scheherazade', 'Noto Nastaliq Urdu', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
 
-  @keyframes pulse {
-    0% { box-shadow: 0 0 10px #ff3c5f, 0 0 20px #ff3c5f; }
-    50% { box-shadow: 0 0 30px #ffcc00, 0 0 60px #ffcc00; }
-    100% { box-shadow: 0 0 10px #ff3c5f, 0 0 20px #ff3c5f; }
-  }
+    p {
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 28px;
+    }
 
-  /* Glitter animation */
-  .glitter {
-    position: absolute;
-    background: gold;
-    border-radius: 50%;
-    width: 6px;
-    height: 6px;
-    top: -10px;
-    opacity: 0.9;
-    pointer-events: none;
-  }
+    .launch-btn {
+      border: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, var(--gold), var(--light-gold));
+      color: #082016;
+      font-weight: 800;
+      font-size: 1.05rem;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.12);
+      transition: transform 0.2s;
+    }
 
-  @keyframes fall {
-    0% { transform: translateY(0) scale(1); opacity: 1; }
-    100% { transform: translateY(100vh) scale(0.5); opacity: 0; }
-  }
+    .launch-btn:hover {
+      transform: scale(1.05);
+    }
 
-  /* Flash background */
-  .flash {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: radial-gradient(circle, rgba(255,255,255,0.9), rgba(255,255,255,0));
-    opacity: 0;
-    pointer-events: none;
-    animation: flashAnim 1s ease-in-out forwards;
-  }
+    .status {
+      margin-top: 20px;
+      color: rgba(255, 255, 255, 0.75);
+    }
 
-  @keyframes flashAnim {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
-  }
+    .crescent {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 80px;
+      height: 80px;
+    }
 
-  .fadeout {
-    animation: fadeOut 1.5s ease forwards;
-  }
+    .crescent svg {
+      width: 100%;
+      height: 100%;
+    }
 
-  @keyframes fadeOut {
-    to { opacity: 0; transform: scale(2); }
-  }
+    /* Falling sparkle */
+    .sparkle {
+      position: fixed;
+      top: -10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--light-gold);
+      opacity: 0.9;
+      pointer-events: none;
+      animation: fall linear forwards;
+      z-index: 999;
+    }
 
-
-</style>
+    @keyframes fall {
+      0% {
+        transform: translateY(0) scale(0.8);
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) scale(0.3);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-  <img src="../assets/images/ismlogo.png" alt="ISM Ernakulam Logo" class="logo" />
-  <button class="launch-btn" id="launchBtn">🎉 Launch Website 🎉</button>
+  <div class="card">
+    <div class="crescent" aria-hidden="true">
+      <!-- Yellow-gold crescent -->
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Crescent moon" width="84" height="84">
+  <title>Crescent moon</title>
+  <circle cx="50" cy="50" r="34" fill="#ffd66b"/>
+  <circle cx="64" cy="44" r="30" fill="#083826"/>
+</svg>
+    </div>
+
+    <h1>Insha'Allah — Launch</h1>
+    <div class="arabic">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+    <button id="launch" class="launch-btn">Launch</button>
+    <div id="status" class="status">Ready</div>
+  </div>
 
   <script>
-    const btn = document.getElementById('launchBtn');
+    const button = document.getElementById('launch');
+    const status = document.getElementById('status');
 
-    btn.addEventListener('click', () => {
-      btn.disabled = true;
-      btn.textContent = "🚀 Launching...";
-      document.body.style.overflow = 'hidden';
-
- 
-      // Step 1: Glitter effect
-      for (let i = 0; i < 1000; i++) {
-        const g = document.createElement('div');
-        g.classList.add('glitter');
-        g.style.left = Math.random() * window.innerWidth + 'px';
-        g.style.background = Math.random() > 0.5 ? 'gold' : '#ff3c5f';
-        g.style.animation = `fall ${2 + Math.random() * 4}s linear forwards`;
-        g.style.width = g.style.height = Math.random() * 6 + 'px';
-        document.body.appendChild(g);
-        setTimeout(() => g.remove(), 5000);
-      }
-
-      // Step 2: Random flashes for effect
-      const flashCount = 3;
-      for (let i = 0; i < flashCount; i++) {
-        setTimeout(() => {
-          const flash = document.createElement('div');
-          flash.classList.add('flash');
-          document.body.appendChild(flash);
-          setTimeout(() => flash.remove(), 1000);
-        }, 500 * i + 500);
-      }
-
-      // Step 3: Fade out and redirect after ~10s
-      setTimeout(() => {
-        document.body.classList.add('fadeout');
-        setTimeout(() => {
-          window.location.href = "https://www.ismkerala.com/ernakulam/";
-        }, 1500);
-      }, 3000);
+    button.addEventListener('click', () => {
+      status.textContent = "Launching — Masha'Allah ✨";
+      const startTime = Date.now();
+      const duration = 5000; // 5 seconds
+      const interval = setInterval(() => {
+        createSparkle();
+        if (Date.now() - startTime > duration) {
+          clearInterval(interval);
+          status.textContent = "Launched — Alhamdulillah 🌙";
+        }
+      }, 50); // new sparkle every 50ms
     });
+
+    function createSparkle() {
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+      const size = Math.random() * 6 + 3;
+      sparkle.style.width = `${size}px`;
+      sparkle.style.height = `${size}px`;
+      sparkle.style.left = `${Math.random() * window.innerWidth}px`;
+      sparkle.style.background = Math.random() > 0.5 ? '#ffd66b' : '#d4af37';
+      sparkle.style.animationDuration = `${3 + Math.random() * 2}s`;
+      document.body.appendChild(sparkle);
+
+      sparkle.addEventListener('animationend', () => sparkle.remove());
+      setTimeout(function() {
+      window.location.href = 'https://www.ismkerala.com/ernakulam/';
+        }, 5000);
+
+    }
   </script>
 </body>
 </html>
