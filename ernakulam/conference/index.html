@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISM Conference</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -77,6 +78,26 @@
     </section>
 
 
+
+<!-- =========================
+     Photo Gallery Section
+========================= -->
+<section id="gallery" class="gallery-section">
+  <div class="container">
+    <h2 class="section-title">📷 Photo Gallery</h2>
+    <div id="photoGallery" class="gallery-grid"></div>
+    <p id="loadingIndicator" class="loading-indicator">Loading images...</p>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" src="" alt="Gallery Image">
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+</section>    
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -103,13 +124,7 @@
         </div>
     </footer>
 
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/jquery.scrollex.min.js"></script>
-    <script src="./assets/js/browser.min.js"></script>
-    <script src="./assets/js/breakpoints.min.js"></script>
-    <script src="./assets/js/flipclock.min.js"></script>
-    <script src="./assets/js/util.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/script.js"></script>    
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
 
