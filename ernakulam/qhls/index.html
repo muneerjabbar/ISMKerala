@@ -5,149 +5,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QHLS</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css?33=2">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 </head>
 
 <body>
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-        <button id="lang-en" class="lang-btn active">English</button>
-        <button id="lang-ml" class="lang-btn">മലയാളം</button>
-    </div>
+<!-- Language Switcher -->
+<div class="language-switcher">
+    <button id="lang-en" class="lang-btn active">English</button>
+    <button id="lang-ml" class="lang-btn">മലയാളം</button>
+</div>
 
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-logo">
-                    <img src="assets/images/logo.png" alt="QHLS Logo" class="logo">
-                    <span class="logo-text">QHLS</span>
-                </div>
-
-                <!-- Right side: Result Button -->
-                <div class="nav-result">
-                    <a href="https://qhls.ismkerala.com/" target="_blank" class="result-button">
-                        🏆 View Results
-                    </a>
-                </div>                
+<!-- Header -->
+<header class="header">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/images/logo.png" alt="QHLS Logo" class="logo">
+                <span class="logo-text">QHLS</span>
             </div>
-        </nav>
-    </header>
 
-    <!-- Hero Section with Carousel -->
-    <section id="home" class="hero">
-        <div class="carousel-container">
-            <div class="carousel-slide active">
-                <img src="assets/images/carousel/1.jpg" alt="ISM Ernakulam" class="carousel-image">
-            </div>
-            <div class="carousel-dots">
-                <span class="dot active" onclick="currentSlide(1)"></span>
-                <!--<span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span> -->
+            <!-- Right side: Result Button -->
+            <div class="nav-result">
+                <a href="https://qhls.ismkerala.com/" target="_blank" class="result-button">
+                    🏆 View Results
+                </a>
             </div>
         </div>
-    </section>
+    </nav>
+</header>
 
-    <!-- Result Announcement Section -->
-    <section class="result-section">
+<!-- Hero Section with Carousel -->
+<section id="home" class="hero">
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <picture>
+                <source media="(width < 800px)" srcset="assets/images/carousel/1.jpg"/>
+                <source media="(width >= 800px)" srcset="assets/images/carousel/1-v.jpg"/>
+                <img src="assets/images/carousel/1-vs.jpg" alt="Chris standing up holding his daughter Elva"/>
+            </picture>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <!--<span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span> -->
+        </div>
+    </div>
+</section>
+
+<!-- Result Announcement Section -->
+<section class="result-section">
     <div class="result-container">
         <h2>📢 QHLS'2025 Results Announced!</h2>
         <p>
-        The much-awaited results for <strong>QHLS'2025</strong> is now available. 
-        You can view your results and download your certificates below.
+            The much-awaited results for <strong>QHLS'2025</strong> is now available.
+            You can view your results and download your certificates below.
         </p>
         <a href="https://qhls.ismkerala.com/" target="_blank" class="result-button">
             🏆 View Results
         </a>
     </div>
-    </section>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title" data-en="📖About QHLS" data-ml="📖QHLS നെ കുറിച്ച്">📖About QHLS 
-            </h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p data-en="The Qur’an Hadith Learning School (QHLS) is one of ISM Kerala’s flagship educational projects, designed to spread authentic Islamic knowledge through a structured and systematic learning program."
-                       data-ml="ഖുര്‍ആന്‍ ഹദീസ് ലേണിംഗ് സ്‌കൂള്‍ (QHLS) എന്നത് ഐ.എസ്.എം കേരളയുടെ പ്രധാന വിദ്യാഭ്യാസ പദ്ധതികളിലൊന്നാണ്. നിശ്ചിത ഘടനയും ക്രമബദ്ധതയുമുള്ള പഠന പദ്ധതിയിലൂടെ യഥാർത്ഥ ഇസ്ലാമിക അറിവ് പ്രചരിപ്പിക്കുകയാണ് ഇതിന്റെ ലക്ഷ്യം.">
-                       The Qur’an Hadith Learning School (QHLS) is one of ISM Kerala’s flagship educational projects, designed to spread authentic Islamic knowledge through a structured and systematic learning program.
-                    </p>
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title" data-en="📖About QHLS" data-ml="📖QHLS നെ കുറിച്ച്">📖About QHLS
+        </h2>
+
+        <div class="about-content">
+            <div class="dis-act-wrap">
+                <div class="eq1">
+                    <div class="about-text">
+                        <p data-en="The Qur’an Hadith Learning School (QHLS) is one of ISM Kerala’s flagship educational projects, designed to spread authentic Islamic knowledge through a structured and systematic learning program."
+                           data-ml="ഖുര്‍ആന്‍ ഹദീസ് ലേണിംഗ് സ്‌കൂള്‍ (QHLS) എന്നത് ഐ.എസ്.എം കേരളയുടെ പ്രധാന വിദ്യാഭ്യാസ പദ്ധതികളിലൊന്നാണ്. നിശ്ചിത ഘടനയും ക്രമബദ്ധതയുമുള്ള പഠന പദ്ധതിയിലൂടെ യഥാർത്ഥ ഇസ്ലാമിക അറിവ് പ്രചരിപ്പിക്കുകയാണ് ഇതിന്റെ ലക്ഷ്യം.">
+                            The Qur’an Hadith Learning School (QHLS) is one of ISM Kerala’s flagship educational
+                            projects,
+                            designed to spread authentic Islamic knowledge through a structured and systematic learning
+                            program.
+                        </p>
+                    </div>
+                    <div class="about-text">
+                        <p data-en="Every year, QHLS follows a well-defined syllabus and curriculum, making Qur’anic learning accessible to students from all walks of life."
+                           data-ml="പ്രതിവര്‍ഷം QHLS നിശ്ചിത പാഠ്യപദ്ധതിയും കരിക്കുലവും പിന്തുടരുന്നു, ഇതുവഴി ഖുര്‍ആന്‍ പഠനം സമൂഹത്തിലെ എല്ലാ വിഭാഗങ്ങളിലുമുള്ള വിദ്യാര്‍ത്ഥികള്‍ക്ക് എളുപ്പത്തില്‍ ലഭ്യമാകുന്നു.">
+                            Every year, QHLS follows a well-defined syllabus and curriculum, making Qur’anic learning
+                            accessible
+                            to students from all walks of life.
+                        </p>
+                    </div>
+                    <div class="about-text">
+                        <p data-en="This year’s syllabus focuses on Surat al-Hajj, exploring its meanings, rulings, and lessons relevant to modern life"
+                           data-ml="ഈ വര്‍ഷത്തെ പാഠ്യപദ്ധതി സൂറത്തുൽ ഹജ്ജ് ആധാരമാക്കിയതാണ്. അതിലെ അര്‍ഥങ്ങളും നിയമങ്ങളും ആധുനിക ജീവിതവുമായി ബന്ധപ്പെട്ട പാഠങ്ങളും ഇതിലൂടെ പഠിപ്പിക്കുന്നു.">
+                            This year’s syllabus focuses on Surat al-Hajj, exploring its meanings, rulings, and lessons
+                            relevant
+                            to modern life
+                        </p>
+                    </div>
                 </div>
-                <div class="about-text">
-                    <p data-en="Every year, QHLS follows a well-defined syllabus and curriculum, making Qur’anic learning accessible to students from all walks of life."
-                        data-ml="പ്രതിവര്‍ഷം QHLS നിശ്ചിത പാഠ്യപദ്ധതിയും കരിക്കുലവും പിന്തുടരുന്നു, ഇതുവഴി ഖുര്‍ആന്‍ പഠനം സമൂഹത്തിലെ എല്ലാ വിഭാഗങ്ങളിലുമുള്ള വിദ്യാര്‍ത്ഥികള്‍ക്ക് എളുപ്പത്തില്‍ ലഭ്യമാകുന്നു.">
-                        Every year, QHLS follows a well-defined syllabus and curriculum, making Qur’anic learning accessible to students from all walks of life.
-                    </p>
+                <div class="eq1">
+                    <div class="about-image">
+                        <img src="assets/images/about.jpg" alt="Falaq">
+                    </div>
+                    <div class="about-text">
+                        <p data-en="Classes are conducted once a week in centers across all districts of Kerala. Each session covers:"
+                           data-ml="കേരളത്തിലെ എല്ലാ ജില്ലകളിലുമുള്ള കേന്ദ്രങ്ങളില്‍ പ്രതിവാരമായി ഒരു ക്ലാസ് വീതം നടത്തപ്പെടുന്നു. ഓരോ ക്ലാസ്സിലും ഉള്‍പ്പെടുത്തുന്ന വിഷയങ്ങള്‍:">
+                            Classes are conducted once a week in centers across all districts of Kerala. Each session
+                            covers:
+                        </p>
+                    </div>
+                    <div class="about-text">
+                        <ul style="list-style: none; padding-left: 0; margin-top: 1rem; line-height: 1.8;text-align:left;">
+                            <li style="margin-bottom: 0.5rem;">
+                                <i class="fas fa-book-open" style="color: #2ecc71; margin-right: 10px;"></i>
+                                <strong>Word-by-word meaning</strong> of verses
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <i class="fas fa-language" style="color: #3498db; margin-right: 10px;"></i>
+                                <strong>Arabic grammar</strong>
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <i class="fas fa-scroll" style="color: #f39c12; margin-right: 10px;"></i>
+                                <strong>Tafseer</strong> (explanation) of ayahs
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">
+                                <i class="fas fa-praying-hands" style="color: #9b59b6; margin-right: 10px;"></i>
+                                <strong>Hadiths, Adhkar & Duas</strong>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="about-text">
-                    <p data-en="This year’s syllabus focuses on Surat al-Hajj, exploring its meanings, rulings, and lessons relevant to modern life"
-                        data-ml="ഈ വര്‍ഷത്തെ പാഠ്യപദ്ധതി സൂറത്തുൽ ഹജ്ജ് ആധാരമാക്കിയതാണ്. അതിലെ അര്‍ഥങ്ങളും നിയമങ്ങളും ആധുനിക ജീവിതവുമായി ബന്ധപ്പെട്ട പാഠങ്ങളും ഇതിലൂടെ പഠിപ്പിക്കുന്നു.">
-                        This year’s syllabus focuses on Surat al-Hajj, exploring its meanings, rulings, and lessons relevant to modern life
-                    </p>
-                </div>      
-                <div class="about-image">
-                    <img src="assets/images/about.jpg" alt="Falaq">
-                </div>  
-                <div class="about-text">
-                    <p data-en="Classes are conducted once a week in centers across all districts of Kerala. Each session covers:"
-                        data-ml="കേരളത്തിലെ എല്ലാ ജില്ലകളിലുമുള്ള കേന്ദ്രങ്ങളില്‍ പ്രതിവാരമായി ഒരു ക്ലാസ് വീതം നടത്തപ്പെടുന്നു. ഓരോ ക്ലാസ്സിലും ഉള്‍പ്പെടുത്തുന്ന വിഷയങ്ങള്‍:">
-                        Classes are conducted once a week in centers across all districts of Kerala. Each session covers:
-                    </p>
-                </div>     
-                <div class="about-text">
-                    <ul style="list-style: none; padding-left: 0; margin-top: 1rem; line-height: 1.8;text-align:left;">
-                        <li style="margin-bottom: 0.5rem;">
-                        <i class="fas fa-book-open" style="color: #2ecc71; margin-right: 10px;"></i>
-                        <strong>Word-by-word meaning</strong> of verses
-                        </li>
-                        <li style="margin-bottom: 0.5rem;">
-                        <i class="fas fa-language" style="color: #3498db; margin-right: 10px;"></i>
-                        <strong>Arabic grammar</strong>
-                        </li>
-                        <li style="margin-bottom: 0.5rem;">
-                        <i class="fas fa-scroll" style="color: #f39c12; margin-right: 10px;"></i>
-                        <strong>Tafseer</strong> (explanation) of ayahs
-                        </li>
-                        <li style="margin-bottom: 0.5rem;">
-                        <i class="fas fa-praying-hands" style="color: #9b59b6; margin-right: 10px;"></i>
-                        <strong>Hadiths, Adhkar & Duas</strong> 
-                        </li>
-                    </ul>
-                </div>                                                                                                                                                                            
+
+
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Convenor Section -->
-    <section id="convenor" class="state-committee">
-        <div class="container">
-            <h2 class="section-title" data-en="District Convenor" data-ml="District Convenor">District Convenor</h2>
-            <div class="committee-grid">
-                <div class="committee-member president">
-                    <img src="../assets/images/committee/afsal.jpg" alt="Convenor">
-                    <h3>Afsal Kochi</h3>
-                    <a href="tel:9496826432" class="call-icon">📞  9496826432</a> 
-                </div>                    
+<!-- Convenor Section -->
+<section id="convenor" class="state-committee">
+    <div class="container">
+        <h2 class="section-title" data-en="District Convenor" data-ml="District Convenor">District Convenor</h2>
+        <div class="committee-grid">
+            <div class="committee-member president">
+                <img src="../assets/images/committee/afsal.jpg" alt="Convenor">
+                <h3>Afsal Kochi</h3>
+                <a href="tel:9496826432" class="call-icon">📞 9496826432</a>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
+<div class="dis-act-wrap">
     <!-- examstructure Section -->
     <section id="examstructure" class="about">
         <div class="container">
-            <h2 class="section-title" data-en="🎓Examination Structure" data-ml="🎓Examination Structure">🎓Examination Structure
+            <h2 class="section-title" data-en="🎓Examination Structure" data-ml="🎓Examination Structure">🎓Examination
+                Structure
             </h2>
             <div class="about-content">
                 <div class="about-text">
                     <p data-en="The QHLS academic cycle culminates in an annual examination held every June, designed to evaluate both understanding and memorization."
                        data-ml="QHLS ന്റെ അക്കാദമിക് വര്‍ഷം ഓരോ ജൂണ്‍ മാസത്തിലും നടക്കുന്ന വാര്‍ഷിക പരീക്ഷയോടെയാണ് സമാപിക്കുന്നത്. ഇതിലൂടെ വിദ്യാര്‍ത്ഥികളുടെ അറിവും മനപ്പാഠശേഷിയും വിലയിരുത്തപ്പെടുന്നു.">
-                       The QHLS academic cycle culminates in an annual examination held every June, designed to evaluate both understanding and memorization.
-                     </p>
+                        The QHLS academic cycle culminates in an annual examination held every June, designed to
+                        evaluate
+                        both understanding and memorization.
+                    </p>
                 </div>
                 <div class="about-text">
                     <ul style="list-style: none; padding: 0; margin-left: 0;text-align:left;">
@@ -163,7 +187,7 @@
                         <li style="display: flex; align-items: start; margin-bottom: 10px;">
                             <span>🏆  State-level top three performers receive special awards, while district toppers are honored by respective ISM committees.</span>
                         </li>
-                    </ul>  
+                    </ul>
                 </div>
             </div>
         </div>
@@ -176,86 +200,96 @@
             </h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p><b>Vision:</b></p>                    
+                    <p><b>Vision:</b></p>
                     <p data-en="To create a Qur’an-literate generation who understand, implement, and spread the message of the Qur’an and Hadith in their personal and social lives."
                        data-ml="ഖുര്‍ആനും ഹദീസും വ്യക്തിജീവിതത്തിലും സാമൂഹികജീവിതത്തിലും മനസ്സിലാക്കി, പ്രാവർത്തികമാക്കി, പ്രചരിപ്പിക്കുന്ന ഖുര്‍ആന്‍ പഠിതാക്കളുടെ തലമുറയെ രൂപപ്പെടുത്തുക.">
-                       To create a Qur’an-literate generation who understand, implement, and spread the message of the Qur’an and Hadith in their personal and social lives.
+                        To create a Qur’an-literate generation who understand, implement, and spread the message of the
+                        Qur’an and Hadith in their personal and social lives.
                     </p>
                 </div>
                 <div class="about-text">
-                    <p><b>Mission:</b></p>                    
+                    <p><b>Mission:</b></p>
                     <p data-en="To provide structured Islamic education based on the Qur’an and authentic Sunnah, cultivating both spiritual growth and intellectual excellence."
                        data-ml="ഖുര്‍ആനും യഥാര്‍ത്ഥ സുന്നത്തും ആധാരമാക്കി ആത്മീയ വളർച്ചയും ബൗദ്ധിക മികവും വളര്‍ത്തുന്ന ഘടനാപരമായ ഇസ്ലാമിക വിദ്യാഭ്യാസം നല്‍കുക.">
-                       To provide structured Islamic education based on the Qur’an and authentic Sunnah, cultivating both spiritual growth and intellectual excellence.
+                        To provide structured Islamic education based on the Qur’an and authentic Sunnah, cultivating
+                        both
+                        spiritual growth and intellectual excellence.
                     </p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- centre Section -->
     <section id="centre" class="about">
         <div class="container">
-            <h2 class="section-title" data-en="🌍Centers Across Kerala & Outside" data-ml="🌍QHLS സെന്ററുകൾ">🌍Centers Across Kerala & Outside
+            <h2 class="section-title" data-en="🌍Centers Across Kerala & Outside" data-ml="🌍QHLS സെന്ററുകൾ">🌍Centers
+                Across
+                Kerala & Outside
             </h2>
             <div class="about-content">
                 <div class="about-text">
                     <p data-en="QHLS operates through hundreds of learning centers spread across Kerala’s 16 districts, providing an opportunity for students from every locality to join.
                                 Each center operates under district and zonal supervision, ensuring quality and consistency in education."
                        data-ml="കേരളത്തിലെ 16 ജില്ലകളിലായി വ്യാപിച്ചിരിക്കുന്ന നൂറുകണക്കിന് പഠനകേന്ദ്രങ്ങളിലൂടെ QHLS പ്രവർത്തിക്കുന്നു. ഓരോ പ്രദേശത്തുമുള്ള വിദ്യാർത്ഥികൾക്കും ഇതിൽ ചേരാനുള്ള അവസരം ലഭിക്കുന്നു. ഓരോ കേന്ദ്രവും ജില്ലയും മേഖലയുമെന്നിങ്ങനെ മേൽനോട്ടത്തിൽ പ്രവർത്തിക്കുന്നതിലൂടെ വിദ്യാഭ്യാസത്തിന്റെ ഗുണനിലവാരവും ഏകതാനതയും ഉറപ്പാക്കുന്നു.">
-                       QHLS operates through hundreds of learning centers spread across Kerala’s 16 districts, providing an opportunity for students from every locality to join.
-                       Each center operates under district and zonal supervision, ensuring quality and consistency in education.
+                        QHLS operates through hundreds of learning centers spread across Kerala’s 16 districts,
+                        providing an
+                        opportunity for students from every locality to join.
+                        Each center operates under district and zonal supervision, ensuring quality and consistency in
+                        education.
                     </p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- action Section -->
-    <section id="action" class="about">
+</div>
+ <section id="action" class="about">
         <div class="container">
             <h2 class="section-title" data-en="💬Call to Action" data-ml="💬ആഹ്വാനം">💬Call to Action
             </h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p><b>Join QHLS today!</b></p>                    
+                    <p><b>Join QHLS today!</b></p>
                     <p data-en="Be part of a statewide network of students and teachers dedicated to the Qur’an and Sunnah."
                        data-ml="ഖുർആനിനും സുന്നത്തിനും സമർപ്പിതരായ വിദ്യാർത്ഥികളും അധ്യാപകരും ഉൾപ്പെടുന്ന സംസ്ഥാനവ്യാപക ശൃംഖലയുടെ ഭാഗമാകൂ.">
                         Be part of a statewide network of students and teachers dedicated to the Qur’an and Sunnah.
                     </p>
                     <p data-en="Tap on 📞 icon to Dail your nearest ISM Unit or Zone QHLS centre to get details and enroll in the class"
                        data-ml="വിവരങ്ങൾ അറിയാനും ക്ലാസിൽ ചേർക്കാനും നിങ്ങളുടെ അടുത്തുള്ള ISM യൂണിറ്റ് അല്ലെങ്കിൽ മണ്ഡലം QHLS സെൻററിനെ വിളിക്കാൻ 📞 ഐക്കണിൽ ടാപ്പ് ചെയ്യൂ.">
-                        Tap on 📞 icon to Dail your nearest ISM Unit or Zone QHLS centre to get details and enroll in the class
-                    </p>                        
+                        Tap on 📞 icon to Dail your nearest ISM Unit or Zone QHLS centre to get details and enroll in the
+                        class
+                    </p>
                 </div>
                 <div class="accordion" id="accordionContainer"></div>
             </div>
         </div>
-    </section>    
+    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 data-en="Follow Us" data-ml="ഞങ്ങളെ പിന്തുടരുക">Follow Us</h3>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/share/1BSHXaHqNy/" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <!-- <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a> -->
-                        <a href="https://www.youtube.com/@ismernakulam262" target="_blank"><i class="fab fa-youtube"></i></a>
-                        <a href="https://whatsapp.com/channel/0029VaAfj9C96H4XexaHHA1r" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    </div>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-en="Follow Us" data-ml="ഞങ്ങളെ പിന്തുടരുക">Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1BSHXaHqNy/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <!-- <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a> -->
+                    <a href="https://www.youtube.com/@ismernakulam262" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://whatsapp.com/channel/0029VaAfj9C96H4XexaHHA1r" target="_blank"><i
+                            class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 ISM . All rights reserved.</p>
-                <p>Powered By gatepass.codex@gmail.com</p>
-            </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ISM . All rights reserved.</p>
+            <p>Powered By gatepass.codex@gmail.com</p>
+        </div>
+    </div>
+</footer>
 
-    <script src="../assets/js/script.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="../assets/js/script.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
 
 </html>

@@ -1472,6 +1472,11 @@ html {
    display: flex;
 }
 
-
-
   }
+
+  .eq1 {
+  @media (min-width: 992px) {
+   flex: 1;
+   padding-left: 8px;
+}
+}
