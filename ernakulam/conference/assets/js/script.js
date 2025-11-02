@@ -5,7 +5,7 @@
         frameborder="0"
         allow="autoplay; encrypted-media"
         allowfullscreen
-        src="https://www.youtube.com/live/WotzyrlhHL0?autoplay=1">
+        src="https://www.youtube.com/embed/WotzyrlhHL0?rel=0&showinfo=0&autoplay=1">
       </iframe>
     `;
   }
