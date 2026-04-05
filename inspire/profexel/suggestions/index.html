@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profexel 2.0</title>
+		<meta property="og:title" content="Profexel 2.0" />
+		<meta property="og:description" content="Leading towards rectitude | Professionals family conference | 2025 October 12, Sunday at Capkon convention centre, calicut" />
+		<meta property="og:image" content="http://qhls.ismkerala.com/pro/images/og.jpg" />
+		<meta property="og:url" content="https://isminspire.com/profexel/" />
+		<meta property="og:type" content="article" />
+		<meta property="og:site_name" content="Profexel 2.0" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    /* Fixed top section */
+    .top-section {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      font-size: 18px;
+      z-index: 10;
+    }
+
+    /* Iframe container below the top section */
+    .iframe-container {
+      position: absolute;
+      top: 60px; /* same as header height */
+      left: 0;
+      width: 100%;
+      height: calc(100% - 60px); /* subtract header height */
+    }
+
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .bottom-section {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      font-size: 18px;
+      z-index: 10;
+
+    }
+    h1 {
+      margin: 0 !important;
+    }
+    .mail-content-wrap {
+      width: auto; 
+      display: flex; 
+      flex: 1; 
+      flex-direction: column;
+      padding: 8px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mail-content-wrap textarea{
+      max-width: 500px;
+    }
+
+  </style>
+  		<link rel="stylesheet" href="../assets/css/main.css" />
+
+</head>
+<body>
+
+  <div class="top-section">
+    						<h1>
+                  <a href="../index.html" style="display: flex; align-items: center; color: #fff; text-decoration: none; font-size: 22px; text-transform: uppercase;">
+                    <img src="../images/logo.png" width="40" style="margin-right: 10px;" alt="Profexel"> Profexel 2.0</a></h1>
+
+  </div>
+
+  <div class="iframe-container">
+    <div class="mail-content-wrap" >
+      <h2>Profexel Suggestions</h2>
+      <textarea style="width: 100%;" name="suggestions" id="ssuggestions" placeholder="What kind of Sessions and Topics you expect from Profexel..."></textarea>
+     </div>
+      <div class="mail-content-wrap">
+        <textarea style="width: 100%;" name="suggestions" id="ksuggestions" placeholder="What kind of facitlites/Stall you expect from Profexel..."></textarea>
+     </div>
+      <div class="mail-content-wrap">
+        <textarea style="width: 100%;" name="suggestions" id="gsuggestions" placeholder="General Suggestions..."></textarea>
+     </div>
+     <div class="mail-content-wrap">
+
+      <ul class="actions">
+              <li>
+                <a id="dynamicMailer" href="mailto:profexelsuggetions@gmail.com?subject=suggestions&body=" class="button">
+                  Email My Suggestion
+                </a></li>
+      </ul>
+    </div>
+
+
+    
+  </div>
+
+
+  <script>
+  const stextarea = document.getElementById("ssuggestions");
+  const ktextarea = document.getElementById("ksuggestions");
+  const gtextarea = document.getElementById("gsuggestions");
+
+
+
+  const mailerLink = document.getElementById("dynamicMailer");
+
+  stextarea.addEventListener("keyup", function () {
+    updateMailLink()
+  });
+
+  ktextarea.addEventListener("keyup", function () {
+    updateMailLink()
+  });
+
+  gtextarea.addEventListener("keyup", function () {
+    updateMailLink()
+  });
+
+  function updateMailLink() {
+    const body = `Session Suggestions: ${stextarea.value}\n\n%20%3A%0D%0AStall Suggestions: ${ktextarea.value}\n\n%20%3A%0D%0AGeneral Suggestions: ${gtextarea.value}`;
+    mailerLink.href = `mailto:`;
+  
+    const mailtoHref =
+      "mailto:inspire.ism.state@gmail.com?subject=Profexel Suggestions&body=" + body;
+    mailerLink.href = mailtoHref;
+  }
+</script>
+
+</body>
+</html>
+

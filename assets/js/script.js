@@ -134,7 +134,7 @@ function navigateToDistrict(districtName) {
 // Future programs expiry check
 document.addEventListener('DOMContentLoaded', function() {
     const futureProgramsSection = document.getElementById('future-programs');
-    const programDate = '2024-11-17'; // Set your expiry date here
+    const programDate = '2025-10-04'; // Set your expiry date here
     
     function checkProgramExpiry() {
         const today = new Date();
@@ -146,6 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
+  
     
     // Check on page load
     checkProgramExpiry();
@@ -304,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Initialize the map centered on Kerala
-    var map = L.map('kerala-map').setView([10.8505, 76.2711], 7); // lat/lng of Kerala center
+    var map = L.map('kerala-map').setView([10.021185,76.3645109], 9); // lat/lng of Kerala center
 
     // Add OpenStreetMap tiles
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

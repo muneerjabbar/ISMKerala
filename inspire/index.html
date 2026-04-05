@@ -1,114 +1,466 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Website Under Construction</title>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        overflow: hidden;
-        flex-direction: column;
-        text-align: center;
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="ism" />
+  <meta name="description" content="ism inspire" />
+  <meta name="author" content="" />
+
+  <title>ISM Inspire</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- font awesome style -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css?1" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <style  type="text/css">
+    .contact_section {
+      background: #ddd;
+    }
+    .service_section .box .img-box.new {
+      width: 200px;
+      height: auto;
+    }
+    .service_section .box:hover .img-box.new img {
+      filter: none !important;
+    }
+    .nav-item a {
+      cursor: pointer;
     }
 
-    h1 {
-        font-size: 3rem;
-        margin-bottom: 10px;
-        letter-spacing: 3px;
-        text-transform: uppercase;
+    .btn-box a.next {
+      display: inline-block;
+      font-family: 'Merriweather Sans', sans-serif;
+      text-transform: uppercase;
+      padding: 10px 45px;
+      background-color: transparent;
+      border: 1px solid #ec2126;
+      border-radius: 0;
+      color: #ec2126;
+    }
+    .social-box .box a {
+      padding: 0 16px;
     }
 
-    p {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
-        color: #d1d1d1;
+    .copy-btn {
+      background-color: #ec2126;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 20px auto;
+      cursor: pointer;
     }
 
-    .gear {
-        width: 60px;
-        height: 60px;
-        margin: 20px;
-        border: 6px solid #fff;
-        border-radius: 50%;
-        border-top: 6px solid #ff6b6b;
-        animation: spin 2s linear infinite;
+    .copy-btn i{
+      font-size: 20px;
     }
 
-    .gears {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .service_section.spec .box:hover {
+            background: #fff;
     }
 
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+    .service_section.spec .box:hover p {
+      color: #121212;
     }
 
-    .footer {
-        position: absolute;
-        bottom: 20px;
-        font-size: 0.9rem;
-        color: #aaa;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .back-btn {
-        margin-top: 10px;
-        padding: 8px 20px;
-        font-size: 1rem;
-        color: #fff;
-        background: #ff6b6b;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-    }
+  </style>
+  <meta property="og:image" content="https://isminspire.com/profexel/images/wall.jpeg" />
 
-    .back-btn:hover {
-        background: #ff4b4b;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-        h1 { font-size: 2rem; }
-        p { font-size: 1rem; }
-        .gear { width: 50px; height: 50px; border-width: 5px; }
-    }
-</style>
 </head>
+
 <body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <img class="logo-img" src="images/ism-inspire-logo.png" alt="">
+            </a>
 
-    <h1>Under Construction</h1>
-    <p>We are working hard to bring you a better experience. Stay tuned!</p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
 
-    <div class="gears">
-        <div class="gear"></div>
-        <div class="gear" style="animation-duration:3s;"></div>
-        <div class="gear" style="animation-duration:1.5s;"></div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item ">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="goToAbout();">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfsl6PW1S3CUUAMPZGY4oQBVZcJjkNNDJZ-s3_PKIxlGrfHrg/viewform">
+                    Register</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="https://feedback.isminspire.com/">Feedback</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" onclick="goToEvent()">Upcoming events</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+     <section class="slider_section " style="margin-bottom: 100px;">
+      <div class="container ">
+        <div class="row">
+          <div class="col-md-12 ">
+            <img onclick="window.location.href='/profexel'" style="max-width: 100%; cursor: pointer;" src="images/gal/pro-3.jpg" alt="Leading Towards rectitude">
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div class="container ">
+        <div class="row">
+          <div class="col-md-12 ">
+            <div id="owl-demo" class="owl-carousel owl-theme">
+              <div class="item"><img src="images/gal/3-0.jpeg" alt="Leading Towards rectitude"></div>
+              <div class="item"><img src="images/gal/3.jpeg" alt="Workshop"></div>
+              <div class="item"><img src="images/gal/4.jpeg" alt="Workshop"></div>
+              <div class="item"><img src="images/gal/5.jpeg" alt="Workshop"></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- feature section -->
+  <section class="feature_section">
+    <div class="container">
+      <div class="feature_container">
+        <div class="box" onclick="goToAbout()">
+          <div class="img-box">
+            <img class="logo-img" src="images/group.png" alt="">
+          </div>
+          <h5 class="name">
+            About us
+          </h5>
+        </div>
+        <div class="box" onclick="register()">
+          <div class="img-box">
+            <img class="logo-img" src="images/edit.png" alt="">
+          </div>
+          <h5 class="name">
+            Register
+          </h5>
+        </div>
+        <div class="box" onclick="goToEvent()">
+          <div class="img-box">
+            <img class="logo-img" src="images/event.png" alt="">
+                 </div>
+          <h5 class="name">
+            Upcoming Events
+          </h5>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="footer">
-        &copy; 2025 Codex
-        <button class="back-btn" onclick="goBack()">Go Back</button>
+  <!-- end feature section -->
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding-bottom" id="about-sec" >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="detail-box">
+            <h2>
+              About us
+            </h2>
+            <p>
+              Dive into a transformative journey of knowledge and spirituality with ISM Inspire! Launched in 2018, this specially crafted series of interactive Islamic sessions is dedicated to cultivating a scholarly audience among Malayali professionals, both within and beyond the borders of Kerala. Our primary mission? To elevate religious awareness and upskill the spiritual journey of professionals like you.
+            </p>
+            <a href="about.html">
+              Read More
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-6">
+          <div class="img-box">
+            <img src="images/about-img.jpg" alt="">
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-<script>
-    function goBack() {
-        window.history.back();
-    }
-</script>
+  <!-- end about section -->
+
+
+  <!-- professional section -->
+
+  <section class="professional_section layout_padding" id="upcoming-event">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="images/gal/pro-1.jpeg" alt="">
+          </div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="detail-box">
+            <h2>
+              Upcoming Event <br>
+            </h2>
+            <p>
+              Profexel 2.0 is a Professionals’ Family Conference that brings together working professionals, students, and families to celebrate the harmony of deen and dunya. Rooted in Islamic values, Profexel inspires individuals to excel in their careers while staying spiritually connected and socially responsible. With engaging sessions, workshops, and family-centered programs, it nurtures a generation that leads with knowledge, ethics, and purpose.
+<br><br>
+📅 Date: 12th October 2025, Sunday<br>
+📍 Venue: Capkon Convention Centre, Calicut
+<br><br>
+
+Profexel 2.0 is not just a conference — it’s a movement towards building a value-driven professional community for a brighter future.
+              </p>
+                <div class="btn-box">
+              <a class="next" href="/profexel/register/">
+                Register
+              </a>
+
+
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end professional section -->
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <div class="container ">
+      <div class="heading_container heading_center">
+        <h2> Our Programs </h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-4 mx-auto">
+          <div class="box ">
+            <div class="img-box">
+              <img src="images/discussion.png" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>
+                Islamic Workshop
+              </h5>
+              <p>
+                Engage in insightful discussions and interactive sessions exploring Islamic teachings and contemporary issues at our comprehensive Islamic Workshop.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 mx-auto">
+          <div class="box ">
+            <div class="img-box">
+              <img src="images/work-team.png" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>
+                Professional Family Meetup
+              </h5>
+              <p>
+                Join us for a Professional Family Meetup, fostering connections, knowledge sharing, and support among career-driven individuals in a familial atmosphere.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 mx-auto">
+          <div class="box ">
+            <div class="img-box">
+              <img src="images/progress.png" alt="" />
+            </div>
+            <div class="detail-box">
+              <h5>
+                IT Professional Gathering
+              </h5>
+              <p>
+                Connecting tech enthusiasts, fostering knowledge exchange, and exploring industry trends at an IT Professional Gathering
+                <br />&nbsp;
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+
+  <!-- contact section -->
+
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>What's Inspire?</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-12" class="video-container">
+          <iframe width="100%" height="600" frameborder="0"
+                  src="https://www.youtube.com/embed/8JpIYu2EhRY?autoplay=0">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- end contact section -->
+
+  <section class="service_section spec layout_padding">
+    <div class="container ">
+      <div class="heading_container heading_center">
+        <h2> Donate us </h2>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-md-6 mx-auto">
+          <div class="box ">
+            <div class="img-box new">
+              <img src="images/qr.jpg" alt="" />
+            </div>
+            <div class="detail-box">
+              <p>
+                You can also be one of us and be part of this program  by donation
+              </p>
+              <div class="copy-btn" onclick="navigator.clipboard.writeText('hashimrishad@okicici');"><i class="fa fa-files-o" aria-hidden="true"></i></div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <h4>
+        Get In Touch
+      </h4>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="info_items">
+            <div class="row">
+              <div class="col-md-4">
+                <a target="_blank"
+                        href="https://www.google.com/maps/place/Salafi+Masjid+%26+Madrasa/@10.0190728,76.3528716,15z/data=!4m2!3m1!1s0x0:0x596013350dfd5842?sa=X&ved=2ahUKEwi23cXm5tKDAxUbcmwGHfFtDJMQ_BJ6BAhQEAA">
+                  <div class="item ">
+                    <div class="img-box ">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      ISM Inspire
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="tel:94000 95648">
+                  <div class="item ">
+                    <div class="img-box ">
+                      <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      +91 89439 00645
+                    </p>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="mailto:inspire.ism.state@gmail.com">
+                  <div class="item ">
+                    <div class="img-box">
+                      <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <p>
+                      inspire.ism.state@gmail.com
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="social-box">
+      <h4>
+        Follow Us
+      </h4>
+      <div class="box">
+        <a href="https://www.facebook.com/p/Inspire-ISM-Kakkanad-100069779871638" target="_blank">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.youtube.com/@ISMINSPIRE" target="_blank">
+          <i class="fa fa-youtube" aria-hidden="true"></i>
+        </a>
+        <a href="https://chat.whatsapp.com/CCIESkhWRPH9Z3rBAY43jY" target="_blank">
+          <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayDateYear"></span> All Rights Reserved By
+        <a href="">ISM Team Inspire <i><br />( Professional wing of ISM)</i></a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- footer section -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <!-- End Google Map -->
+
 
 </body>
+
 </html>

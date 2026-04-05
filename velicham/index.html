@@ -1,114 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Website Under Construction</title>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        overflow: hidden;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 3rem;
-        margin-bottom: 10px;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-    }
-
-    p {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
-        color: #d1d1d1;
-    }
-
-    .gear {
-        width: 60px;
-        height: 60px;
-        margin: 20px;
-        border: 6px solid #fff;
-        border-radius: 50%;
-        border-top: 6px solid #ff6b6b;
-        animation: spin 2s linear infinite;
-    }
-
-    .gears {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-
-    .footer {
-        position: absolute;
-        bottom: 20px;
-        font-size: 0.9rem;
-        color: #aaa;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .back-btn {
-        margin-top: 10px;
-        padding: 8px 20px;
-        font-size: 1rem;
-        color: #fff;
-        background: #ff6b6b;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-    }
-
-    .back-btn:hover {
-        background: #ff4b4b;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-        h1 { font-size: 2rem; }
-        p { font-size: 1rem; }
-        .gear { width: 50px; height: 50px; border-width: 5px; }
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velicham</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 </head>
+
 <body>
+<!-- Language Switcher -->
+<div class="language-switcher">
+    <button id="lang-en" class="lang-btn active">English</button>
+    <button id="lang-ml" class="lang-btn">മലയാളം</button>
+</div>
 
-    <h1>Under Construction</h1>
-    <p>We are working hard to bring you a better experience. Stay tuned!</p>
+<!-- Header -->
+<header class="header">
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Left side: Logo and title -->
+            <div class="nav-logo">
+                <img src="assets/images/logo.png" alt="Velicham Logo" class="logo">
+                <span class="logo-text">Velicham</span>
+            </div>
 
-    <div class="gears">
-        <div class="gear"></div>
-        <div class="gear" style="animation-duration:3s;"></div>
-        <div class="gear" style="animation-duration:1.5s;"></div>
+            <!-- Right side: Result Button -->
+            <div class="nav-result">
+                <a href="https://ismkerala.info/velicham-result/" target="_blank" class="result-button">
+                    🏆 View Results
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section with Carousel -->
+<section id="home" class="hero">
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <picture>
+                <source media="(width < 800px)" srcset="assets/images/carousel/1.jpg"/>
+                <source media="(width >= 800px)" srcset="assets/images/carousel/1-v.jpg"/>
+                <img src="assets/images/carousel/1-vs.jpg" alt="Chris standing up holding his daughter Elva"/>
+            </picture>
+        </div>
+        <div class="carousel-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <!--<span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span> -->
+        </div>
     </div>
+</section>
 
-    <div class="footer">
-        &copy; 2025 Codex
-        <button class="back-btn" onclick="goBack()">Go Back</button>
+
+<!-- Result Announcement Section -->
+<section class="result-section">
+    <div class="result-container">
+        <h2>📢 Velicham 17th Phase & Balavelicham 11th Phase Results Announced!</h2>
+        <p>
+            The much-awaited results for <strong>Velicham 17th Phase</strong> and
+            <strong>Balavelicham 11th Phase</strong> are now available.
+            You can view your results and download your certificates below.
+        </p>
+        <a href="https://ismkerala.info/velicham-result/" target="_blank" class="result-button">
+            🏆 View Results
+        </a>
     </div>
+</section>
 
-<script>
-    function goBack() {
-        window.history.back();
-    }
-</script>
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title" data-en="📖About Velicham" data-ml="📖“വെളിച്ചം” നെ കുറിച്ച്">📖About Velicham
+        </h2>
+        <div class="about-content">
+            <div class="dis-act-wrap">
+                <div class="eq1">
+                    <div class="about-text">
+                        <p data-en="Velicham (meaning “Light”) is one of ISM Kerala’s flagship international Qur’an learning projects, designed to make the message of the Qur’an reach every home. Through this initiative, ISM aims to bring the Qur’an closer to the public in an engaging and accessible printed format."
+                           data-ml="“വെളിച്ചം” എന്നത് ഐ.എസ്.എം കേരളയുടെ പ്രധാന അന്തർദേശീയ ഖുർആൻ പഠന പദ്ധതികളിലൊന്നാണ്. ഖുർആന്റെ സന്ദേശം ഓരോ വീടുകളിലേക്കും എത്തിക്കുന്നതിനെ ലക്ഷ്യമാക്കി രൂപകല്പന ചെയ്തതാണ് ഇത്. ഈ പദ്ധതിയിലൂടെ ഖുർആന്റെ സന്ദേശം ആകർഷകമായും വായനാസൗഹൃദമായും അച്ചടിച്ച രൂപത്തിൽ പൊതുജനങ്ങളിലേക്ക് എത്തിക്കുന്നതാണ് ലക്ഷ്യം.">
+                            Velicham (meaning “Light”) is one of ISM Kerala’s flagship international Qur’an learning
+                            projects, designed to make the message of the Qur’an reach every home. Through this
+                            initiative, ISM aims to bring the Qur’an closer to the public in an engaging and accessible
+                            printed format.
+                        </p>
+                    </div>
+                    <div class="about-text">
+                        <p data-en="Velicham follows a systematic, phase-based study plan, each phase covering one or more selected Surah from the Qur’an along with its detailed tafsir (interpretation) written by Amani Moulavi."
+                           data-ml="പ്രതിവര്‍ഷം QHLS നിശ്ചിത പാഠ്യപദ്ധതിയും കരിക്കുലവും പിന്തുടരുന്നു, ഇതുവഴി ഖുര്‍ആന്‍ പഠനം സമൂഹത്തിലെ എല്ലാ വിഭാഗങ്ങളിലുമുള്ള വിദ്യാര്‍ത്ഥികള്‍ക്ക് എളുപ്പത്തില്‍ ലഭ്യമാകുന്നു.">
+                            Velicham follows a systematic, phase-based study plan, each phase covering one or more
+                            selected Surah from the Qur’an along with its detailed tafsir (interpretation) written by
+                            Amani Moulavi.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="assets/images/about.jpg" alt="Falaq">
+                    </div>
+                    <div class="about-text">
+                        <p data-en="Currently, the 18th phase of Velicham is ongoing, focusing on Surat Yaseen. With each phase lasting six months, the project envisions completing the study of the entire Qur’an within ten years."
+                           data-ml="ഇപ്പോൾ വെളിച്ചത്തിന്റെ 18-ആം ഘട്ടമാണ് പുരോഗമിക്കുന്നത്. ഈ ഘട്ടത്തിൽ സൂറത്ത് യാസീൻ ഉൾപ്പെടുത്തിയിരിക്കുന്നു. ഓരോ ഘട്ടവും ആറു മാസം ദൈർഘ്യമുള്ളതാണ്, ഇതിലൂടെ പത്ത് വർഷത്തിനുള്ളിൽ മുഴുവൻ ഖുർആൻ പഠനം പൂർത്തിയാക്കുകയെന്നതാണ് പദ്ധതിയുടെ ദൂരദർശനം">
+                            Currently, the 18th phase of Velicham is ongoing, focusing on Surat Yaseen. With each phase
+                            lasting six months, the project envisions completing the study of the entire Qur’an within
+                            ten years.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="assets/images/phase18velicham.jpg" alt="Falaq">
+                    </div>
+                    <div class="about-text">
+                        <p data-en="For children, a special parallel program called Balavelicham is conducted, focusing on smaller Surahs and easy-to-understand lessons. The 12th phase of Balavelicham is currently in progress, nurturing Qur’anic learning habits among young minds."
+                           data-ml="കുട്ടികൾക്കായി ബാലവെളിച്ചം എന്ന പ്രത്യേക സമാന്തര പദ്ധതി പ്രവർത്തിക്കുന്നു. ഇതിൽ ചെറു സൂറകളും എളുപ്പത്തിൽ മനസ്സിലാക്കാവുന്ന പാഠങ്ങളും ഉൾക്കൊള്ളുന്നു. നിലവിൽ 12-ആം ഘട്ടം പുരോഗമിച്ചുകൊണ്ടിരിക്കുകയാണ്. ബാലവെളിച്ചം ചെറുപ്രായക്കാരിൽ ഖുർആൻ പഠന ശീലങ്ങൾ വളർത്തുകയാണ് ലക്ഷ്യം.">
+                            For children, a special parallel program called Balavelicham is conducted, focusing on
+                            smaller Surahs and easy-to-understand lessons. The 12th phase of Balavelicham is currently
+                            in progress, nurturing Qur’anic learning habits among young minds.
+                        </p>
+                    </div>
 
+                </div>
+                <div class="eq1">
+
+                    <div class="about-text">
+                        <ul style="list-style: none; padding-left: 0; margin-top: 1rem; line-height: 1.8; text-align:left;">
+                            <li style="margin-bottom: 0.5rem;">
+                                <i class="fas fa-book-open" style="color: #2ecc71; margin-right: 10px;"></i>
+                                <strong>For every phase, a Velicham book is published and distributed widely across
+                                    Kerala and beyond.</strong>
+                            </li>
+
+                            <li style="margin-bottom: 0.5rem;">
+                                <i class="fas fa-language" style="color: #3498db; margin-right: 10px;"></i>
+                                <strong>Each book contains tafsir lessons along with a question paper and answer
+                                    sheet.</strong>
+                            </li>
+
+                            <li style="margin-bottom: 0.5rem;">
+                                <i class="fas fa-list-ul" style="color: #f39c12; margin-right: 10px;"></i>
+                                <strong>The questions are objective type, enabling learners of all backgrounds to
+                                    participate easily.</strong>
+                            </li>
+
+                            <li style="margin-bottom: 0.5rem;">
+                                <i class="fas fa-box" style="color: #9b59b6; margin-right: 10px;"></i>
+                                <strong>Participants fill the answer sheet and submit it to the Velicham collection box
+                                    placed in every ISM Unit.</strong>
+                            </li>
+
+                            <li style="margin-bottom: 0.5rem;">
+                                <i class="fas fa-hourglass-half" style="color: #e67e22; margin-right: 10px;"></i>
+                                <strong>After the submission deadline, answer sheets are evaluated at different
+                                    levels.</strong>
+                            </li>
+
+                            <li style="margin-bottom: 0.5rem;">
+                                <i class="fas fa-trophy" style="color: #e74c3c; margin-right: 10px;"></i>
+                                <strong>Top 3 achievers are recognized at the state, district, zone, and unit
+                                    levels.</strong>
+                            </li>
+
+                            <li style="margin-bottom: 0.5rem;">
+                                <i class="fas fa-star" style="color: #f1c40f; margin-right: 10px;"></i>
+                                <strong>This multi-level reward system motivates consistent participation and continuous
+                                    learning.</strong>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="about-image">
+                        <img src="assets/images/approach.jpg" alt="About ISM Kerala">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Convenor Section -->
+<section id="convenor" class="state-committee">
+    <div class="container">
+        <h2 class="section-title" data-en="District Convenor" data-ml="District Convenor">District Convenor</h2>
+        <div class="committee-grid">
+            <div class="committee-member president">
+                <img src="../assets/images/committee/unais.jpg" alt="Convenor">
+                <h3>Unais MA</h3>
+                <a href="tel:9544581275" class="call-icon">📞 9544581275</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- vision Section -->
+<section id="vision" class="about">
+    <div class="container">
+        <h2 class="section-title" data-en="🌺Vision & Mission" data-ml="🌺ദർശനവും ദൗത്യവും">🌺Vision & Mission
+        </h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p><b>Vision:</b></p>
+                <p data-en="To enlighten every heart with the divine message of the Qur’an, creating a society guided by its wisdom and values."
+                   data-ml="ഖുർആന്റെ ദിവ്യ സന്ദേശം ഓരോ ഹൃദയത്തിലും പ്രഭാസിപ്പിച്ച് അതിന്റെ ജ്ഞാനവും മൂല്യങ്ങളും നയിക്കുന്ന ഒരു സമൂഹം രൂപപ്പെടുത്തുക.">
+                    To enlighten every heart with the divine message of the Qur’an, creating a society guided by its
+                    wisdom and values.
+                </p>
+            </div>
+            <div class="about-text">
+                <p><b>Mission:</b></p>
+                <p data-en="To make Qur’anic learning simple, accessible, and continuous for everyone through structured printed lessons, engaging assessments, and community-based motivation."
+                   data-ml="ക്രമബദ്ധമായ അച്ചടിച്ച പാഠങ്ങൾ, ആകർഷകമായ മൂല്യനിർണയങ്ങൾ, സമൂഹ അടിസ്ഥാനത്തിലുള്ള പ്രചോദനങ്ങൾ എന്നിവയിലൂടെ ഖുർആൻ പഠനം എല്ലാർക്കും ലളിതവും പ്രാപ്യവുമായതും തുടർച്ചയായതുമാക്കുക.">
+                    To make Qur’anic learning simple, accessible, and continuous for everyone through structured printed
+                    lessons, engaging assessments, and community-based motivation.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- action Section -->
+<section id="action" class="about">
+    <div class="container">
+        <h2 class="section-title" data-en="💬Call to Action" data-ml="💬ആഹ്വാനം">💬Call to Action
+        </h2>
+        <div class="about-content">
+            <div class="about-text">
+                <b>
+                    <p data-en="Join the Velicham learning movement today!"
+                       data-ml="ഇന്നുതന്നെ വെളിച്ചം പഠനപ്രസ്ഥാനവുമായി ചേരൂ!">
+                        Join the Velicham learning movement today!
+                    </p>
+                </b>
+                <p data-en="Light up your life with the knowledge of the Qur’an."
+                   data-ml="ഖുർആന്റെ ജ്ഞാനത്തോടെ നിങ്ങളുടെ ജീവിതം പ്രകാശിപ്പിക്കുക">
+                    Light up your life with the knowledge of the Qur’an.
+                </p>
+                <p data-en="Tap on 📞 icon to Dial your nearest ISM Unit or Zone Velicham Convenor to collect the latest Velicham book, participate in the ongoing 18th Phase, and submit your answers before the deadline."
+                   data-ml="ഏറ്റവും അടുത്തുള്ള ഐ.എസ്.എം യൂണിറ്റ് അല്ലെങ്കിൽ സോൺ വെളിച്ചം കോൺവീനറെ ബന്ധപ്പെടുക, പുതിയ വെളിച്ചം പുസ്തകം കൈപ്പറ്റുക, 18-ാം ഘട്ടത്തിൽ പങ്കെടുക്കുക, സമയപരിധിക്കുള്ളിൽ ഉത്തരങ്ങൾ സമർപ്പിക്കുക. വിളിക്കാൻ 📞 ഐക്കണിൽ ടാപ്പ് ചെയ്യൂ.">
+                    Tap on 📞 icon to Dial your nearest ISM Unit or Zone Velicham Convenor to collect the latest Velicham
+                    book, participate in the ongoing 18th Phase, and submit your answers before the deadline.
+                </p>
+            </div>
+            <div class="accordion" id="accordionContainer"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-en="Follow Us" data-ml="ഞങ്ങളെ പിന്തുടരുക">Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1BSHXaHqNy/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <!-- <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a> -->
+                    <a href="https://www.youtube.com/@ismernakulam262" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://whatsapp.com/channel/0029VaAfj9C96H4XexaHHA1r" target="_blank"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ISM . All rights reserved.</p>
+            <p>Powered By gatepass.codex@gmail.com</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../assets/js/script.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
+
 </html>
