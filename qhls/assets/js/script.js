@@ -3,11 +3,11 @@ const qhlsData = [
   {
     "units": [
       { "name": "Kasargode", "convenor": "NAVAZ KA", "phone": "8921281831" },
-      { "name": "Kannur", "convenor": "Saad El Deen Thalakodan", "phone": "9778324039" },
+      { "name": "Kannur", "convenor": "Ansar Master", "phone": "8547168963" },
       { "name": "Wayanad", "convenor": "Hani hakkam", "phone": "8129234366" },
       { "name": "Calicut North", "convenor": "SAHAD K", "phone": "9645017088" },
       { "name": "Calicut South", "convenor": "Fajaru Sadik P", "phone": "9946006256" },
-      { "name": "Malappuram East", "convenor": "JAFAR M", "phone": "8129139883" },
+      { "name": "Malappuram East", "convenor": "Zubair Thekkumuri", "phone": "9037172775" },
       { "name": "Malappuram West", "convenor": "Shihabudheen", "phone": "9495046917" },
       { "name": "Palakkad", "convenor": "SHOUKATHALI VC ", "phone": "9447364722" },
       { "name": "Thrissur", "convenor": "Shameer PI", "phone": "9746060430" },
@@ -15,9 +15,9 @@ const qhlsData = [
       { "name": "Alappuzha", "convenor": "Abdul Vahab PN", "phone": "9142049492" },
       { "name": "Idukki", "convenor": "Hashim MA", "phone": "9495254072" },
       { "name": "Kottayam", "convenor":  "Saad El Deen Thalakodan", "phone": "9778324039" },
-      { "name": "Pathanamthitta", "convenor":  "Saad El Deen Thalakodan", "phone": "9778324039" },
-      { "name": "Kollam", "convenor": "Anas Swalahi ", "phone": "9633693473" },
-      { "name": "Trivandrum", "convenor":  "Saad El Deen Thalakodan", "phone": "9778324039" }
+      { "name": "Pathanamthitta", "convenor":  "Rasheed Moulavi", "phone": "9495154183" },
+      { "name": "Kollam", "convenor": "Ashik Shajahan ", "phone": "9633660464" },
+      { "name": "Trivandrum", "convenor":  "Musammil", "phone": "7994773209" }
     ]
   }
 ]
